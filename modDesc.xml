@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>Giants, Glowins Modschmiede</author>
+    <version>0.9.0.0</version>
+    <title>
+        <en>Claas Xerion 4500-5000 DashboardLive</en>
+		<de>Claas Xerion 4500-5000 DashboardLive</de>
+    </title>
+    <multiplayer supported="true" />
+    <dependencies>
+        <dependency>FS22_DashboardLive</dependency>
+    </dependencies>
+    
+    <description>
+    	<en>
+<![CDATA[Claas Xerion 4500-5000 DashboardLive
+
+Claas Xerion:
+Price: 409.500 $
+Engine configuration:
+- Xerion 4500 (490 hp)
+- Xerion 5000 (530 hp)
+- Xerion 5000 Anniversary (530 hp)
+]]>
+</en>
+<de>
+<![CDATA[Claas Xerion 4500-5000 DashboardLive
+
+Claas Xerion:
+Preis: 409.500 €
+Motorkonfiguration:
+- Xerion 4500 (490 hp)
+- Xerion 5000 (530 hp)
+- Xerion 5000 Anniversary (530 ps)
+]]>
+</de>
+<fr>
+<![CDATA[Pack tracteurs Claas
+
+Claas Xerion:
+Prix: 409.500 €
+Configuration du moteur:
+- Xerion 4500 (490 cv)
+- Xerion 5000 (530 cv)
+- Xerion 5000 Anniversary (530 cv)
+]]>
+</fr>
+    </description>
+    
+    <iconFilename>modIcon.dds</iconFilename>
+    <storeItems>
+        <storeItem xmlFilename="xerion5000.xml"/>
+    </storeItems>
+</modDesc>
