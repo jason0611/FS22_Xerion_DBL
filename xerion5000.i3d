@@ -52,9 +52,9 @@
     <File fileId="42" filename="$data/vehicles/claas/xerion5000/xerion5000_25AnniversaryDecal_diffuse.png"/>
     <File fileId="2" filename="$data/vehicles/claas/xerion5000/xerion5000_normal.png"/>
     <File fileId="3" filename="$data/vehicles/claas/xerion5000/xerion5000_vmask.png"/>
-    <File fileId="29" filename="../../../../DBL_MeshLibary/Segments_1.png"/>
-    <File fileId="27" filename="textures/dashboardSymbols_diffuse.dds"/>
-    <File fileId="23" filename="textures/xerion5000LCD_diffuse.dds"/>
+    <File fileId="29" filename="textures/selectionBar_diffuse.png"/>
+    <File fileId="27" filename="textures/dashboardSymbols_diffuse.png"/>
+    <File fileId="23" filename="textures/xerion5000LCD_diffuse.png"/>
   </Files>
 
 
