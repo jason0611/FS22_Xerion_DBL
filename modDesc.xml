@@ -46,7 +46,7 @@ Configuration du moteur:
 </fr>
     </description>
     
-    <iconFilename>icon_Xerion5000.dds</iconFilename>
+    <iconFilename>icon_xerion5000.dds</iconFilename>
     <storeItems>
         <storeItem xmlFilename="xerion5000.xml"/>
     </storeItems>
