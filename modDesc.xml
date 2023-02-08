@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="72">
     <author>Giants, Glowins Modschmiede</author>
-    <version>1.0.0.0</version>
+    <version>0.9.2.0</version>
     <title>
         <en>Claas Xerion 4500-5000 DashboardLive</en>
     </title>
@@ -46,7 +46,7 @@ Configuration du moteur:
 </fr>
     </description>
     
-    <iconFilename>modIcon.dds</iconFilename>
+    <iconFilename>icon_Xerion5000.dds</iconFilename>
     <storeItems>
         <storeItem xmlFilename="xerion5000.xml"/>
     </storeItems>
