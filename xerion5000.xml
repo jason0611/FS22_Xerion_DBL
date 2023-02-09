@@ -1630,9 +1630,9 @@
 			<dashboard valueType="vca" cmd="ks" displayType="EMITTER" node="dbl_vca_ks" baseColor="BLACK" emitColor="YELLOW" intensity="0.8" groups="MOTOR_ACTIVE" />
 			
 			<!-- HeadlandManagement -->
-			<dashboard valueType="hlm" option="field" displayType="VISIBILITY" node="dbl_hlm_fieldS" groups="MOTOR_ACTIVE "/>
+			<dashboard valueType="hlm" option="field" displayType="VISIBILITY" node="dbl_hlm_fieldS" groups="MOTOR_ACTIVE"/>
 			<dashboard valueType="hlm" option="field" displayType="EMITTER" node="dbl_hlm_fieldS" baseColor="CLAAS_GREEN1" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="hlm" option="headland" displayType="VISIBILITY" node="dbl_hlm_headlandS" groups="MOTOR_ACTIVE "/>
+			<dashboard valueType="hlm" option="headland" displayType="VISIBILITY" node="dbl_hlm_headlandS" groups="MOTOR_ACTIVE"/>
 			<dashboard valueType="hlm" option="headland" displayType="EMITTER" node="dbl_hlm_headlandS" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<!--dashboard valueType="hlm" option="contour" displayType="VISIBILITY" node="dbl_hlm_contourS" groups="MOTOR_ACTIVE "/-->
 			<!--dashboard valueType="hlm" option="contour" displayType="EMITTER" node="dbl_hlm_contourS" baseColor="BLACK" emitColor="0 0 1 1" intensity="0.8" groups="MOTOR_ACTIVE" /-->
