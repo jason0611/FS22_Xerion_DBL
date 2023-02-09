@@ -1562,7 +1562,7 @@
 			<dashboard valueType="base" cmd="lowered" joints="1" displayType="EMITTER" node="dbl_att_b_3p_down" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE DBL_3P_B_LOWERABLE" />
 			<dashboard valueType="base" cmd="liftState" joints="1" factor="100" default="0" displayType="TEXT" node="dbl_att_b_state" textMask="000 %" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
 			<dashboard valueType="base" cmd="connected" joints="1" displayType="VISIBILITY" node="dbl_att_b_liftPointer" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="connected" joints="1" displayType="EMITTER" node="dbl_att_b_liftPointer" baseColor="BLACK" emitColor="BLACK" intendity="0.2" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT" />
+			<dashboard valueType="base" cmd="connected" joints="1" displayType="EMITTER" node="dbl_att_b_liftPointer" baseColor="BLACK" emitColor="BLACK" intensity="0.2" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT" />
 			<dashboard valueType="base" cmd="liftState" joints="1" factor="100" displayType="ANIMATION" animName="dbl_3p_back" minValueAnim="1" maxValueAnim="100" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="disconnected" joints="1 2 3" option="all" displayType="EMITTER" node="dbl_att_b_3p_locked" baseColor="BLACK" emitColor="BLACK" intensity="0.0"/>
 			<!-- Trailer Attacher -->

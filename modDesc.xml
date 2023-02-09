@@ -12,38 +12,63 @@
     
     <description>
 <en>
-<![CDATA[Claas Xerion 4500-5000 DashboardLive
+<![CDATA[
+This is the Claas Xerion from the Vanilla game, with built-in DashboardLive features:
 
-Claas Xerion:
-Price: 409.500 $
+Price: €409,500
+
 Engine configuration:
 - Xerion 4500 (490 hp)
 - Xerion 5000 (530 hp)
 - Xerion 5000 Anniversary (530 hp)
+
+Implemented functions:
+- Status of front and rear 3-point attachers (percentage, graphical and symbolic)
+- Status of coupled implements (active/inactive, folded/unfolded)
+- Fill levels of the tanks of coupled implements
+- Display when parking brake is active (if FS22_VehicleControlAddon is present)
+- Display when differential lock is active (if FS22_VehicleControlAddon is present)
+- Display when cruise control is active
+- Display when keep-speed function is active (if FS22_VehicleControlAddon is present)
+- Headland management status (if FS22_HeadlandManagement is present)
+- Display of engine load
+- Warning displays for critical diesel or DEF level
+- Display of DEF tank content
+- PTO status and PTO speed
+- Display of the currently selected (active) unit
+
+Required mods: FS22_DashboardLive
 ]]>
 </en>
 <de>
-<![CDATA[Claas Xerion 4500-5000 DashboardLive
+<![CDATA[
+Dies ist der Claas Xerion aus dem Vanilla-Spiel, ergänzt um DashboardLive:
 
-Claas Xerion:
 Preis: 409.500 €
+
 Motorkonfiguration:
 - Xerion 4500 (490 hp)
 - Xerion 5000 (530 hp)
 - Xerion 5000 Anniversary (530 ps)
+
+Umgesetzte Funktionen:
+- Status der vorderen und hinteren 3-Punkt-Aufnahmen (Prozentwert, grafisch und symbolisch)
+- Status von angekuppelten Geräten (aktiv/inaktiv, eingeklappt/ausgeklappt)
+- Füllstände der Tanks angekoppelter Geräte
+- Anzeige bei aktiver Parkbremse (wenn FS22_VehicleControlAddon vorhanden)
+- Anzeige bei aktiver Differentialsperre (wenn FS22_VehicleControlAddon vorhanden)
+- Anzeige bei aktivem Tempomat
+- Anzeige bei aktiver Keep-Speed-Funktion (wenn FS22_VehicleControlAddon vorhanden)
+- Status des Vorgewende Managements (wenn FS22_HeadlandManagement vorhanden)
+- Anzeige der Motorlast
+- Warnanzeigen bei kritischem Diesel- oder AdBlue-Füllstand
+- Anzeige des AdBlue-Tankinhalts
+- PTO-Status und PTO-Drehzahl
+- Anzeige des gerade selektierten (aktiven) Geräts
+
+Benötigte Mods: FS22_DashboardLive
 ]]>
 </de>
-<fr>
-<![CDATA[Pack tracteurs Claas
-
-Claas Xerion:
-Prix: 409.500 €
-Configuration du moteur:
-- Xerion 4500 (490 cv)
-- Xerion 5000 (530 cv)
-- Xerion 5000 Anniversary (530 cv)
-]]>
-</fr>
     </description>
     
     <iconFilename>icon_xerion5000.dds</iconFilename>
