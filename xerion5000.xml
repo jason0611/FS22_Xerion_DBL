@@ -2106,7 +2106,7 @@
 		<i3dMapping id="dbl_selector_-1" node="0>0|7|0|0|1|1|10|45" />
 		<i3dMapping id="dbl_selector_-2" node="0>0|7|0|0|1|1|10|46" />
 		
-		
+		<i3dMapping id="dbl_cam" node="0>0|7|0|0|4|2" />
 		
 		<i3dMapping id="dbl_hlm" node="0>0|7|0|0|1|1|10|23" />
 		

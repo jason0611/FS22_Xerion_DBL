@@ -558,7 +558,7 @@
             <TransformGroup name="cameraRaycastNode2" translation="0 3.93867 -0.58081" nodeId="370"/>
             <TransformGroup name="cameraRaycastNode3" translation="0 2.22068 -2.86097" nodeId="371"/>
             <Camera name="iconsCamera" translation="-0.00185462 0.109648 -0.011429" rotation="-88.0067 0.917062 2.82265e-07" nodeId="372" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
-            <Camera name="work_cam" translation="-0.279307 3.15115 -0.0264806" rotation="164.921 34.3828 179.923" nodeId="373" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+            <Camera name="work_cam" translation="-0.322957 3.1304 0.037269" rotation="164.921 34.3828 179.923" nodeId="373" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
           </TransformGroup>
           <TransformGroup name="exitPoint" translation="2.33178 0 0" nodeId="374"/>
           <TransformGroup name="lights" nodeId="375">
@@ -899,6 +899,7 @@
                 <TransformGroup name="cameras" translation="0 -2.11658 -0.221708" nodeId="629">
                   <Camera name="indoorCamera1" translation="0 3.55534 -0.365574" rotation="-25 180 0" nodeId="630" fov="70" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
                   <Shape shapeId="92" name="shadowFocusBox" translation="0 3.02371 -0.574457" visibility="false" clipDistance="150" nodeId="631" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+                  <Camera name="dblCam" translation="0.0506439 4.20405 -0.830039" rotation="-35.1965 -2.89255 0.0640762" nodeId="969" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
                 </TransformGroup>
                 <TransformGroup name="lights" translation="-0 0.271151 -1.24098" nodeId="632">
                   <TransformGroup name="sharedLights" translation="0 -2.38773 1.01928" nodeId="633">
