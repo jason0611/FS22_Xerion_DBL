@@ -1589,11 +1589,11 @@
 			<dashboard valueType="selection" selection="0" displayType="EMITTER" node="dbl_selector_0" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" />
 			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_selector_1" groups="MOTOR_ACTIVE DBL_F_CONNECT" />
 			<dashboard valueType="selection" selection="1" displayType="EMITTER" node="dbl_selector_1" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" />
-			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_selector_2" groups="MOTOR_ACTIVE DBL_F_CONNECT" />
+			<dashboard valueType="base" cmd="hasSpec" option="spec_attachable" trailer="2" joints="4 6" displayType="VISIBILITY" node="dbl_selector_2" groups="MOTOR_ACTIVE DBL_F_CONNECT" />
 			<dashboard valueType="selection" selection="2" displayType="EMITTER" node="dbl_selector_2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" />
 			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_selector_-1" groups="MOTOR_ACTIVE DBL_B_CONNECT" />
 			<dashboard valueType="selection" selection="-1" displayType="EMITTER" node="dbl_selector_-1" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" />
-			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_selector_-2" groups="MOTOR_ACTIVE DBL_B_CONNECT" />
+			<dashboard valueType="base" cmd="hasSpec" option="spec_attachable" trailer="2" joints="1 2 3 5" displayType="VISIBILITY" node="dbl_selector_-2" groups="MOTOR_ACTIVE DBL_B_CONNECT" />
 			<dashboard valueType="selection" selection="-2" displayType="EMITTER" node="dbl_selector_-2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" />
 			<!-- Hektar -->
 			<!--dashboard valueType="proSeed" option="areafield" displayType="TEXT" node="dbl_ps_ha" textColor="0.1 0.1 0.1 1" textAlignment="RIGHT" textMask="000" textSize="0.0035" font="GENERIC" emissiveScale="0.7" groups="MOTOR_ACTIVE" /-->
