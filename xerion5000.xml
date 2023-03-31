@@ -1164,7 +1164,10 @@
             <mirror node="mirrorRightDecal" prio="1"/>
             <mirror node="mirrorInteriorDecal" prio="2"/>
         </mirrors>
-    </enterable>
+		<dashboards>
+			<dashboard valueType="time" displayType="TEXT" node="dbl_clock" textMask="00:00" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE" />
+		</dashboards>
+	</enterable>
     <motorized>
         <consumerConfigurations>
             <consumerConfiguration>
@@ -1584,7 +1587,13 @@
 			<dashboard valueType="base" cmd="ptoRpm" joints="1 2 3 5" options="any" max="1000" doInterpolation="true" interpolationSpeed="0.5" node="dbl_pto_rpm" displayType="TEXT" textColor="0.1 0.1 0.1 1" textAlignment="RIGHT" textMask="0000 min-1" textSize="0.0035" font="GENERIC" groups="MOTOR_ACTIVE" />
 			
 			<!-- Heading -->
-			<dashboard valueType="base" cmd="heading" displayType="TEXT" node="dbl_hlm" textMask="000 DEG" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="heading" displayType="TEXT" node="dbl_heading" textMask="000 DEG" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE" />
+			
+			<!-- Field Number -->
+			<dashboard valueType="base" cmd="fieldNumber" displayType="TEXT" node="dbl_field" textMask="Feld000" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE" />
+			
+			<!-- Real Clock -->
+			<dashboard valueType="base" cmd="realclock" displayType="TEXT" node="dbl_realClock" textMask="ssssssss" textColor="BLACK" textSize="0.002" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE" />
 			
 			<!-- Selector -->
 			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_selector_0" groups="MOTOR_ACTIVE" />
@@ -1630,6 +1639,7 @@
 			<dashboard valueType="vca" cmd="diff_front" displayType="EMITTER" node="dbl_vca_awd" emitColor="CLAAS_WHITE1" intensity="0.5" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="ks" displayType="VISIBILITY" node="dbl_vca_ks" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="ks" displayType="EMITTER" node="dbl_vca_ks" baseColor="BLACK" emitColor="YELLOW" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="slip" displayType="TEXT" node="dbl_numbersSlip" textColor="0.8 0.8 0.8 1" textAlignment="RIGHT" textMask="000" textSize="0.004" font="GENERIC" groups="MOTOR_ACTIVE"/>
 			
 			<!-- HeadlandManagement -->
 			<dashboard valueType="hlm" option="field" displayType="VISIBILITY" node="dbl_hlm_fieldS" groups="MOTOR_ACTIVE"/>
@@ -2110,7 +2120,11 @@
 		
 		<i3dMapping id="dbl_cam" node="0>0|7|0|0|4|2" />
 		
-		<i3dMapping id="dbl_hlm" node="0>0|7|0|0|1|1|10|23" />
+		<i3dMapping id="dbl_heading" node="0>0|7|0|0|1|1|10|23" />
+		<i3dMapping id="dbl_clock" node="0>0|7|0|0|1|1|10|47" />
+		<i3dMapping id="dbl_field" node="0>0|7|0|0|1|1|10|48" />
+		<i3dMapping id="dbl_realClock" node="0>0|7|0|0|1|1|10|49" />
+		<i3dMapping id="dbl_numbersSlip" node="0>0|7|0|0|1|1|14" />
 		
 		<i3dMapping id="dbl_testNode" node="0>0|7|0|0|1|1|10|24" />
 		
