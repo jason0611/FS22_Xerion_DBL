@@ -1576,8 +1576,8 @@
 			<!-- Folding state -->
 			<dashboard valueType="base" cmd="folded" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_folded" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="folded" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folded" baseColor="BLACK" emitColor="RED" intensity="0.2" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" trailer="2" displayType="VISIBILITY" node="dbl_att_b_unfolded" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" trailer="2" displayType="EMITTER" node="dbl_att_b_unfolded" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_unfolded" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_unfolded" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="folding" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_folding" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="folding" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folding" baseColor="RED" emitColor="GREY" intensity="1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="unfoldingState" joints="1 2 3 5" options="any" displayType="TEXT" node="dbl_att_b_foldingState" factor="100" textMask="000%" textColor="GREY" textSize="0.002" fontThickness="1.5" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE DBL_3P_B_FOLDABLE" />
