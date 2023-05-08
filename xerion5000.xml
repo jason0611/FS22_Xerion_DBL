@@ -1393,6 +1393,9 @@
 		<animation name="dbl_3p_back" soundVolumeFactor="1.0">
 			<part node="dbl_att_b_liftPointer" startTime="0.0" endTime="1.0" startTrans="-0.491 0.081 0.139" endTrans="-0.492 0.107 0.148" visibility="true" />
 		</animation>
+		<animation name="dbl_gps_course" soudVolumeFactor="1.0">
+			<part node="dbl_gps_course" startTime="0.0" endTime="1.0" startTrans="-0.467 3.327 0.338" endTrans="-0.582 3.354 0.246" visibility="true" />
+		</animation>
     </animations>
     <cylindered>
         <movingTools>
@@ -1502,7 +1505,6 @@
 			<!-- Back -->
 			<group name="DBL_B_CONNECT" attacherJointIndices="1 2 3 5" />
 			<group name="TRAILER2B" dbl="base_hasSpec" dblOption="spec_attachable" dblTrailer="2" attacherJointIndices="1 2 3 5" />
-			<group name="DBL_B_FOLDABLE" op="and" dbl="base_foldable" dblAttacherJointIndices="1 2 3 5" />
 			<!-- 3-Point-Attacher -->
 			<group name="DBL_3P_B_CONNECT" attacherJointIndices="1" />
 			<group name="DBL_3P_B_LOWERABLE" op="and" dbl="base_lowerable" dblAttacherJointIndices="1" />
@@ -1579,8 +1581,8 @@
 			<dashboard valueType="base" cmd="folded" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folded" baseColor="BLACK" emitColor="RED" intensity="0.2" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_unfolded" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="unfolded" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_unfolded" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="folding unfolding" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_folding" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="folding unfolding" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folding" baseColor="RED" emitColor="GREY" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="folding" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_folding" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="folding" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folding" baseColor="RED" emitColor="GREY" intensity="1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="unfoldingState" joints="1 2 3 5" options="any" displayType="TEXT" node="dbl_att_b_foldingState" factor="100" textMask="000%" textColor="GREY" textSize="0.002" fontThickness="1.5" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE DBL_3P_B_FOLDABLE" />
 			
 			<!-- PTO -->
@@ -1647,8 +1649,8 @@
 			<dashboard valueType="hlm" option="field" displayType="EMITTER" node="dbl_hlm_fieldS" baseColor="CLAAS_GREEN1" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="hlm" option="headland" displayType="VISIBILITY" node="dbl_hlm_headlandS" groups="MOTOR_ACTIVE"/>
 			<dashboard valueType="hlm" option="headland" displayType="EMITTER" node="dbl_hlm_headlandS" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
-			<!--dashboard valueType="hlm" option="contour" displayType="VISIBILITY" node="dbl_hlm_contourS" groups="MOTOR_ACTIVE "/-->
-			<!--dashboard valueType="hlm" option="contour" displayType="EMITTER" node="dbl_hlm_contourS" baseColor="BLACK" emitColor="0 0 1 1" intensity="0.8" groups="MOTOR_ACTIVE" /-->
+			<dashboard valueType="hlm" option="contour" displayType="VISIBILITY" node="dbl_hlm_contourS" groups="MOTOR_ACTIVE "/>
+			<dashboard valueType="hlm" option="contour" displayType="EMITTER" node="dbl_hlm_contourS" baseColor="BLACK" emitColor="0 0 1 1" intensity="0.8" groups="MOTOR_ACTIVE" />
 
 			<!-- dbl upper (gps) dashboard -->
 			
@@ -1665,6 +1667,14 @@
 			<dashboard valueType="gps" option="lane-" displayType="VISIBILITY" node="dbl_gps_lane_minus" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" option="lane-" displayType="EMITTER" node="dbl_gps_lane_minus" emitColor="CLAAS_WHITE1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" factor="0.1" displayType="NUMBER" numbers="dbl_gps_lane" numberColor="3 3 3 1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<!-- GPS course -->
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="VISIBILITY" node="dbl_gps_left" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="EMITTER" node="dbl_gps_left" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirRight" displayType="VISIBILITY" node="dbl_gps_right" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirRight" displayType="EMITTER" node="dbl_gps_right" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_course" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_course" baseColor="BLACK" emitColor="BLUE" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="delta" displayType="ANIMATION" factor="100" animName="dbl_gps_course" minValueAnim="-50" maxValueAnim="50" groups="MOTOR_ACTIVE DBL_GPS_ON" />
         	<!-- GPS Width-->
         	<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width" numberColor="3 3 3 1" intensity="3" groups="MOTOR_ACTIVE DBL_GPS_ON" />
         </dashboardLive>
@@ -2097,6 +2107,9 @@
 		<i3dMapping id="dbl_gps_lane" node="0>0|7|0|0|11|7|2" />
 		<i3dMapping id="dbl_gps_lane_minus" node="0>0|7|0|0|11|7|4" />
 		<i3dMapping id="dbl_gps_lane_plus" node="0>0|7|0|0|11|7|3" />
+		<i3dMapping id="dbl_gps_left" node="0>0|7|0|0|11|7|5" />
+		<i3dMapping id="dbl_gps_right" node="0>0|7|0|0|11|7|6" />
+		<i3dMapping id="dbl_gps_course" node="0>0|7|0|0|11|7|7" />
 		
 		<i3dMapping id="dbl_vca_slip" node="0>0|7|0|0|1|1|10|25" />
 		<i3dMapping id="dbl_cruise" node="0>0|7|0|0|1|1|10|26" />
