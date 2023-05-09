@@ -1393,7 +1393,7 @@
 		<animation name="dbl_3p_back" soundVolumeFactor="1.0">
 			<part node="dbl_att_b_liftPointer" startTime="0.0" endTime="1.0" startTrans="-0.491 0.081 0.139" endTrans="-0.492 0.107 0.148" visibility="true" />
 		</animation>
-		<animation name="dbl_gps_course" soudVolumeFactor="1.0">
+		<animation name="dbl_gps_course" soundVolumeFactor="1.0">
 			<part node="dbl_gps_course" startTime="0.0" endTime="1.0" startTrans="-0.467 3.327 0.338" endTrans="-0.582 3.354 0.246" visibility="true" />
 		</animation>
     </animations>
