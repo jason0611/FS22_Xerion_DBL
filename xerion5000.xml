@@ -1668,10 +1668,10 @@
 			<dashboard valueType="gps" option="lane-" displayType="EMITTER" node="dbl_gps_lane_minus" emitColor="CLAAS_WHITE1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" factor="0.1" displayType="NUMBER" numbers="dbl_gps_lane" numberColor="3 3 3 1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<!-- GPS course -->
-			<dashboard valueType="gpsLane" option="dirLeft" displayType="VISIBILITY" node="dbl_gps_left" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirLeft" displayType="EMITTER" node="dbl_gps_left" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirRight" displayType="VISIBILITY" node="dbl_gps_right" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirRight" displayType="EMITTER" node="dbl_gps_right" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirRight" displayType="VISIBILITY" node="dbl_gps_left" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirRight" displayType="EMITTER" node="dbl_gps_left" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="VISIBILITY" node="dbl_gps_right" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="EMITTER" node="dbl_gps_right" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_course" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_course" baseColor="BLACK" emitColor="BLUE" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" option="delta" displayType="ANIMATION" factor="100" animName="dbl_gps_course" minValueAnim="-50" maxValueAnim="50" groups="MOTOR_ACTIVE DBL_GPS_ON" />
