@@ -1574,8 +1574,8 @@
 			<dashboard valueType="base" cmd="liftState" joints="1" factor="100" displayType="ANIMATION" animName="dbl_3p_back" minValueAnim="1" maxValueAnim="100" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="disconnected" joints="1 2 3" option="all" displayType="EMITTER" node="dbl_att_b_3p_locked" baseColor="BLACK" emitColor="BLACK" intensity="0.0"/>
 			<!-- Trailer Attacher -->
-			<dashboard valueType="base" cmd="connected" joints="2 3" option="any" displayType="VISIBILITY" node="dbl_att_b_trailer" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="lowered" joints="2 3" option="any" displayType="EMITTER" node="dbl_att_b_trailer" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="connected" joints="2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_trailer" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="lowered" joints="2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_trailer" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE" />
 			<!-- Folding state -->
 			<dashboard valueType="base" cmd="folded" joints="1 2 3 5" option="any" displayType="VISIBILITY" node="dbl_att_b_folded" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="base" cmd="folded" joints="1 2 3 5" option="any" displayType="EMITTER" node="dbl_att_b_folded" baseColor="BLACK" emitColor="RED" intensity="0.2" groups="MOTOR_ACTIVE" />
@@ -1616,15 +1616,15 @@
 			<!--dashboard valueType="proSeed" option="laneFull" displayType="TEXT" node="dbl_testNode" textMask="000" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE PAGE2"/-->
 			
 			<!-- FillLevel -->
-			<dashboard valueType="base" cmd="connected" joints="1 2 3 4 6" option="any" node="dbl_fillLevelS" displayType="VISIBILITY" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="connected" joints="1 2 3 4 6" option="any" node="dbl_fillLevelS" displayType="EMITTER" baseColor="BLACK" emitColor="BLACK" intensity="1" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="base" cmd="connected" joints="1 2 3" option="any" node="dbl_fillLevelT1" displayType="VISIBILITY" groups="MOTOR_ACTIVE DBL_B_CONNECT" />
-			<dashboard valueType="base" cmd="connected" joints="1 2 3" option="any" node="dbl_fillLevelT1" displayType="EMITTER" baseColor="BLACK" emitColor="BLACK" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="connected" joints="1 2 3 4 5 6" option="any" node="dbl_fillLevelS" displayType="VISIBILITY" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="connected" joints="1 2 3 4 5 6" option="any" node="dbl_fillLevelS" displayType="EMITTER" baseColor="BLACK" emitColor="BLACK" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="base" cmd="connected" joints="1 2 3 5" option="any" node="dbl_fillLevelT1" displayType="VISIBILITY" groups="MOTOR_ACTIVE DBL_B_CONNECT" />
+			<dashboard valueType="base" cmd="connected" joints="1 2 3 5" option="any" node="dbl_fillLevelT1" displayType="EMITTER" baseColor="BLACK" emitColor="BLACK" intensity="1" groups="MOTOR_ACTIVE" />
 			
-			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="1" partition="1" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT1P1" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE1" />
+			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3 5" trailer="1" partition="1" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT1P1" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE1" />
 			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="2" partition="1" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT2P1" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE TRAILER2B PAGE1" />
-			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="1" partition="2" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT1P2" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE1" />
-			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="2" partition="2" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT2P2" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE TRAILER2B PAGE1" />
+			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3 5" trailer="1" partition="2" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT1P2" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE1" />
+			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3 5" trailer="2" partition="2" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelT2P2" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE TRAILER2B PAGE1" />
 			<dashboard valueType="base" cmd="fillLevel" joints="4 6" trailer="1" partition="0" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelF" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_F_CONNECT PAGE1" />
 			
 			<!--
