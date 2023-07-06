@@ -1510,13 +1510,13 @@
 			<group name="DBL_3P_B_LOWERABLE" op="and" dbl="base_lowerable" dblAttacherJointIndices="1" />
 			<group name="DBL_3P_B_FOLDABLE" op="and" dbl="base_foldable" dblAttacherJointIndices="1" />
 			<!-- Trailer Attacher -->
-			<group name="DBL_TL_B_CONNECT" op="and" attacherJointIndices="2 3" />
-			<group name="DBL_TL_B_LOWERABLE" op="and" dbl="base_lowerable" dblAttacherJointIndices="2 3" />
+			<group name="DBL_TL_B_CONNECT" op="and" attacherJointIndices="2 3 5" />
+			<group name="DBL_TL_B_LOWERABLE" op="and" dbl="base_lowerable" dblAttacherJointIndices="2 3 5" />
 			<!-- K100 Attacher-->
 			<group name="DBL_TZ_B_CONNECT" dblAttacherJointIndices="5" />
 			
 			<!-- PTO -->
-			<group name="DBL_PTO_ACTIVE" op="and" dbl="base_pto" dblAttacherJoints="1 2 3" />
+			<group name="DBL_PTO_ACTIVE" op="and" dbl="base_pto" dblAttacherJoints="1 2 3 5" />
 			
 			<!-- Guidance Steering -->
 			<group name="DBL_GPS_ON" op="and" dbl="gps_on" />
