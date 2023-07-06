@@ -1565,7 +1565,7 @@
 			<!-- 3-Point-Attacher -->
 			<dashboard valueType="base" cmd="lifted" joints="1" displayType="VISIBILITY" node="dbl_att_b_3p_up" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT" />
 			<dashboard valueType="base" cmd="lowered" joints="1" displayType="VISIBILITY" node="dbl_att_b_3p_down" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
-			<dashboard valueType="base" cmd="disconnected" joints="1 2 3" option="all" displayType="VISIBILITY" node="dbl_att_b_3p_locked" groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" cmd="disconnected" joints="1 2 3 5" option="all" displayType="VISIBILITY" node="dbl_att_b_3p_locked" groups="MOTOR_ACTIVE"/>
 			<dashboard valueType="base" cmd="lifted" joints="1" displayType="EMITTER" node="dbl_att_b_3p_up" baseColor="BLACK" emitColor="RED" intensity="0.2" groups="MOTOR_ACTIVE DBL_3P_B_LOWERABLE" />
 			<dashboard valueType="base" cmd="lowered" joints="1" displayType="EMITTER" node="dbl_att_b_3p_down" baseColor="BLACK" emitColor="GREEN" intensity="0.2" groups="MOTOR_ACTIVE DBL_3P_B_LOWERABLE" />
 			<dashboard valueType="base" cmd="liftState" joints="1" factor="100" default="0" displayType="TEXT" node="dbl_att_b_state" textMask="000 %" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
