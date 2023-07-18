@@ -1675,7 +1675,9 @@
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_course" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_course" baseColor="BLACK" emitColor="BLUE" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" option="delta" displayType="ANIMATION" factor="100" animName="dbl_gps_course" minValueAnim="-50" maxValueAnim="50" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-        	<!-- GPS Width-->
+        	<!-- MiniMap -->
+        	<dashboard valueType="miniMap" displayType="VISIBILITY" node="dbl_mapPlane" />
+			<!-- GPS Width-->
         	<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width" numberColor="3 3 3 1" intensity="3" groups="MOTOR_ACTIVE DBL_GPS_ON" />
         </dashboardLive>
     </dashboard>
@@ -2141,6 +2143,8 @@
 		<i3dMapping id="dbl_numbersSlip" node="0>0|7|0|0|1|1|14" />
 		
 		<i3dMapping id="dbl_testNode" node="0>0|7|0|0|1|1|10|24" />
+		
+		<i3dMapping id="dbl_mapPlane" node="0>0|7|0|0|11|7|8" />
 		
     </i3dMappings>
 </vehicle>
