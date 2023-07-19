@@ -1655,7 +1655,7 @@
 			<!-- dbl upper (gps) dashboard -->
 			
 			<!-- GPS Terminal -->
-            <dashboard valueType="gps" displayType="EMITTER" node="display2" idleValue="-1" intensity="0.3" groups="MOTOR_ACTIVE"/>
+            <!-- dashboard valueType="gps" displayType="EMITTER" node="display2" idleValue="-1" intensity="-1"/ -->
 			<!-- GPS -->
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_width" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="gps" option="active" displayType="VISIBILITY" node="dbl_gps_active" groups="MOTOR_ACTIVE" />
@@ -1676,7 +1676,7 @@
 			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_course" baseColor="BLACK" emitColor="BLUE" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" option="delta" displayType="ANIMATION" factor="100" animName="dbl_gps_course" minValueAnim="-50" maxValueAnim="50" groups="MOTOR_ACTIVE DBL_GPS_ON" />
         	<!-- MiniMap -->
-        	<dashboard valueType="miniMap" displayType="VISIBILITY" node="dbl_mapPlane" />
+        	<dashboard valueType="miniMap" displayType="VISIBILITY" node="dbl_mapPlane" groups="MOTOR_ACTIVE" />
 			<!-- GPS Width-->
         	<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width" numberColor="3 3 3 1" intensity="3" groups="MOTOR_ACTIVE DBL_GPS_ON" />
         </dashboardLive>

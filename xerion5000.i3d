@@ -6,6 +6,7 @@
   </Asset>
 
   <Files>
+    <File fileId="41" filename="$data/maps/mapUS/overview.dds"/>
     <File fileId="25" filename="$data/shaders/glowShader.xml"/>
     <File fileId="38" filename="$data/shaders/mirrorShader.xml"/>
     <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
@@ -20,37 +21,37 @@
     <File fileId="39" filename="$data/shared/rasterPattern_diffuse.png"/>
     <File fileId="34" filename="$data/shared/window_diffuse.png"/>
     <File fileId="35" filename="$data/shared/window_vmask.png"/>
-    <File fileId="50" filename="$data/vehicles/claas/claasWeights_normal.png"/>
-    <File fileId="51" filename="$data/vehicles/claas/claasWeights_vmask.png"/>
+    <File fileId="51" filename="$data/vehicles/claas/claasWeights_normal.png"/>
+    <File fileId="52" filename="$data/vehicles/claas/claasWeights_vmask.png"/>
     <File fileId="8" filename="$data/vehicles/claas/xerion5000/xerion5000Anim_normal.png"/>
     <File fileId="9" filename="$data/vehicles/claas/xerion5000/xerion5000Anim_vmask.png"/>
     <File fileId="10" filename="$data/vehicles/claas/xerion5000/xerion5000Decal_diffuse.png"/>
     <File fileId="11" filename="$data/vehicles/claas/xerion5000/xerion5000Decal_normal.png"/>
     <File fileId="12" filename="$data/vehicles/claas/xerion5000/xerion5000Decal_vmask.png"/>
-    <File fileId="52" filename="$data/vehicles/claas/xerion5000/xerion5000EngineDecal_diffuse.png"/>
-    <File fileId="53" filename="$data/vehicles/claas/xerion5000/xerion5000Engine_normal.png"/>
-    <File fileId="54" filename="$data/vehicles/claas/xerion5000/xerion5000Engine_vmask.png"/>
-    <File fileId="55" filename="$data/vehicles/claas/xerion5000/xerion5000Grid02_diffuse.png"/>
-    <File fileId="56" filename="$data/vehicles/claas/xerion5000/xerion5000Grid02_normal.png"/>
+    <File fileId="53" filename="$data/vehicles/claas/xerion5000/xerion5000EngineDecal_diffuse.png"/>
+    <File fileId="54" filename="$data/vehicles/claas/xerion5000/xerion5000Engine_normal.png"/>
+    <File fileId="55" filename="$data/vehicles/claas/xerion5000/xerion5000Engine_vmask.png"/>
+    <File fileId="56" filename="$data/vehicles/claas/xerion5000/xerion5000Grid02_diffuse.png"/>
+    <File fileId="57" filename="$data/vehicles/claas/xerion5000/xerion5000Grid02_normal.png"/>
     <File fileId="32" filename="$data/vehicles/claas/xerion5000/xerion5000Grid03_diffuse.png"/>
     <File fileId="33" filename="$data/vehicles/claas/xerion5000/xerion5000Grid03_normal.png"/>
-    <File fileId="58" filename="$data/vehicles/claas/xerion5000/xerion5000Grid_diffuse.png"/>
-    <File fileId="59" filename="$data/vehicles/claas/xerion5000/xerion5000Grid_normal.png"/>
-    <File fileId="57" filename="$data/vehicles/claas/xerion5000/xerion5000Grids_vmask.png"/>
+    <File fileId="59" filename="$data/vehicles/claas/xerion5000/xerion5000Grid_diffuse.png"/>
+    <File fileId="60" filename="$data/vehicles/claas/xerion5000/xerion5000Grid_normal.png"/>
+    <File fileId="58" filename="$data/vehicles/claas/xerion5000/xerion5000Grids_vmask.png"/>
     <File fileId="21" filename="$data/vehicles/claas/xerion5000/xerion5000Hoses_normal.png"/>
     <File fileId="22" filename="$data/vehicles/claas/xerion5000/xerion5000Hoses_vmask.png"/>
-    <File fileId="43" filename="$data/vehicles/claas/xerion5000/xerion5000Hydraulic_normal.png"/>
-    <File fileId="44" filename="$data/vehicles/claas/xerion5000/xerion5000Hydraulic_vmask.png"/>
+    <File fileId="44" filename="$data/vehicles/claas/xerion5000/xerion5000Hydraulic_normal.png"/>
+    <File fileId="45" filename="$data/vehicles/claas/xerion5000/xerion5000Hydraulic_vmask.png"/>
     <File fileId="26" filename="$data/vehicles/claas/xerion5000/xerion5000InteriorDecal_diffuse.png"/>
     <File fileId="30" filename="$data/vehicles/claas/xerion5000/xerion5000Interior_normal.png"/>
     <File fileId="31" filename="$data/vehicles/claas/xerion5000/xerion5000Interior_vmask.png"/>
     <File fileId="13" filename="$data/vehicles/claas/xerion5000/xerion5000Lights_normal.png"/>
     <File fileId="14" filename="$data/vehicles/claas/xerion5000/xerion5000Lights_vmask.png"/>
-    <File fileId="48" filename="$data/vehicles/claas/xerion5000/xerion5000WeightsDecal_diffuse.png"/>
-    <File fileId="49" filename="$data/vehicles/claas/xerion5000/xerion5000WeightsDecal_normal.png"/>
-    <File fileId="46" filename="$data/vehicles/claas/xerion5000/xerion5000Weights_normal.png"/>
-    <File fileId="47" filename="$data/vehicles/claas/xerion5000/xerion5000Weights_vmask.png"/>
-    <File fileId="45" filename="$data/vehicles/claas/xerion5000/xerion5000_25AnniversaryDecal_diffuse.png"/>
+    <File fileId="49" filename="$data/vehicles/claas/xerion5000/xerion5000WeightsDecal_diffuse.png"/>
+    <File fileId="50" filename="$data/vehicles/claas/xerion5000/xerion5000WeightsDecal_normal.png"/>
+    <File fileId="47" filename="$data/vehicles/claas/xerion5000/xerion5000Weights_normal.png"/>
+    <File fileId="48" filename="$data/vehicles/claas/xerion5000/xerion5000Weights_vmask.png"/>
+    <File fileId="46" filename="$data/vehicles/claas/xerion5000/xerion5000_25AnniversaryDecal_diffuse.png"/>
     <File fileId="2" filename="$data/vehicles/claas/xerion5000/xerion5000_normal.png"/>
     <File fileId="3" filename="$data/vehicles/claas/xerion5000/xerion5000_vmask.png"/>
     <File fileId="42" filename="../FS22_DashboardLive/shader/miniMap.xml"/>
@@ -62,8 +63,8 @@
 
   <Materials>
     <Material name="claasWeights_mat" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
-      <Normalmap fileId="50"/>
-      <Glossmap fileId="51"/>
+      <Normalmap fileId="51"/>
+      <Glossmap fileId="52"/>
       <CustomParameter name="RDT" value="1 1 0 0"/>
       <CustomParameter name="colorMat0" value="0.04 0.04 0.04 0"/>
       <CustomParameter name="colorMat1" value="0.21 0.26 0.1 0"/>
@@ -110,7 +111,8 @@
       <CustomParameter name="lightControl" value="1 0 1 0"/>
       <CustomParameter name="blinkSpeed" value="7 1 0 1"/>
     </Material>
-    <Material name="miniMap" materialId="13" diffuseColor="1 1 1 1" customShaderId="42">
+    <Material name="miniMap" materialId="13" customShaderId="42">
+      <Texture fileId="41"/>
     </Material>
     <Material name="mirror_mat1" materialId="14" diffuseColor="0 0 0 1" specularColor="0 1 1" customShaderId="38">
       <Reflectionmap lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="planar" scaling="1" refractiveIndex="10" bumpScale="0.1" shapesObjectMask="4294967295" lightsObjectMask="4294967295"/>
@@ -133,7 +135,7 @@
       <Glossmap fileId="35"/>
     </Material>
     <Material name="xerion5000_25AnniversaryDecal_mat" materialId="19" alphaBlending="true" customShaderId="4" customShaderVariation="Decal_normalThirdUV">
-      <Texture fileId="45"/>
+      <Texture fileId="46"/>
       <Normalmap fileId="19"/>
       <Glossmap fileId="3"/>
     </Material>
@@ -162,19 +164,19 @@
       <Glossmap fileId="12"/>
     </Material>
     <Material name="xerion5000Engine_mat" materialId="23" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
-      <Normalmap fileId="53"/>
-      <Glossmap fileId="54"/>
+      <Normalmap fileId="54"/>
+      <Glossmap fileId="55"/>
       <CustomParameter name="colorMat0" value="0 0.402 0.6105 1"/>
     </Material>
     <Material name="xerion5000EngineDecal_mat" materialId="24" alphaBlending="true" customShaderId="4" customShaderVariation="Decal_normalThirdUV">
-      <Texture fileId="52"/>
+      <Texture fileId="53"/>
       <Normalmap fileId="19"/>
       <Glossmap fileId="12"/>
     </Material>
     <Material name="xerion5000Grid02_mat" materialId="25" customShaderId="4" customShaderVariation="secondUV_colorMask">
-      <Texture fileId="55"/>
-      <Normalmap fileId="56"/>
-      <Glossmap fileId="57"/>
+      <Texture fileId="56"/>
+      <Normalmap fileId="57"/>
+      <Glossmap fileId="58"/>
     </Material>
     <Material name="xerion5000Grid03_mat" materialId="26" customShaderId="4" customShaderVariation="colorMask">
       <Texture fileId="32"/>
@@ -190,9 +192,9 @@
       <CustomParameter name="colorMat7" value="0.0409 0.0409 0.0409 1"/>
     </Material>
     <Material name="xerion5000Grid_mat" materialId="27" alphaBlending="true" customShaderId="4" customShaderVariation="secondUV_colorMask">
-      <Texture fileId="58"/>
-      <Normalmap fileId="59"/>
-      <Glossmap fileId="57"/>
+      <Texture fileId="59"/>
+      <Normalmap fileId="60"/>
+      <Glossmap fileId="58"/>
       <CustomParameter name="colorMat0" value="0.0086 0.0086 0.0086 0"/>
       <CustomParameter name="colorMat1" value="0.0086 0.0086 0.0086 0"/>
       <CustomParameter name="colorMat2" value="0.0086 0.0086 0.0086 0"/>
@@ -206,8 +208,8 @@
       <CustomParameter name="colorMat1" value="0.6654 0.6654 0.6654 8"/>
     </Material>
     <Material name="xerion5000Hydraulic_mat" materialId="29" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
-      <Normalmap fileId="43"/>
-      <Glossmap fileId="44"/>
+      <Normalmap fileId="44"/>
+      <Glossmap fileId="45"/>
       <CustomParameter name="colorMat0" value="1 0.7758 0 1"/>
       <CustomParameter name="colorMat1" value="0.0338 0.0338 0.0338 0"/>
     </Material>
@@ -252,6 +254,7 @@
       <Texture fileId="23"/>
       <Normalmap fileId="19"/>
       <Glossmap fileId="24"/>
+      <CustomParameter name="emitColor" value="0 0 0 1"/>
     </Material>
     <Material name="xerion5000Lights_mat" materialId="36" diffuseColor="0.494118 0.494118 0.494118 1" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
       <Normalmap fileId="13"/>
@@ -262,15 +265,15 @@
       <CustomParameter name="colorMat4" value="0.068 0.068 0.068 0"/>
     </Material>
     <Material name="xerion5000Weights_mat" materialId="37" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
-      <Normalmap fileId="46"/>
-      <Glossmap fileId="47"/>
+      <Normalmap fileId="47"/>
+      <Glossmap fileId="48"/>
       <CustomParameter name="colorMat0" value="0.04 0.04 0.04 0"/>
       <CustomParameter name="colorMat1" value="0.04 0.04 0.04 1"/>
     </Material>
     <Material name="xerion5000WeightsDecal_mat" materialId="38" customShaderId="4" customShaderVariation="Decal_colorMask">
-      <Texture fileId="48"/>
-      <Normalmap fileId="49"/>
-      <Glossmap fileId="47"/>
+      <Texture fileId="49"/>
+      <Normalmap fileId="50"/>
+      <Glossmap fileId="48"/>
       <CustomParameter name="colorMat0" value="0.04 0.04 0.04 0"/>
       <CustomParameter name="colorMat1" value="0.531 0.0357 0.0112 0"/>
     </Material>
@@ -869,10 +872,10 @@
                     </TransformGroup>
                     <Shape shapeId="116" name="gps_lane_+" translation="-0.520772 3.26128 0.2782" rotation="-113.94 38.146 166.863" scale="3 3 3" clipDistance="20" nodeId="726" materialIds="10" castsShadows="true" receiveShadows="true"/>
                     <Shape shapeId="117" name="gps_lane_-" translation="-0.521123 3.26177 0.277651" rotation="-113.94 38.146 166.863" scale="3 3 3" clipDistance="20" nodeId="727" materialIds="10" castsShadows="true" receiveShadows="true"/>
-                    <Shape shapeId="118" name="dbl_gps_left" translation="-0.454388 3.32809 0.341278" rotation="-107.518 35.0913 166.839" scale="4 4 4" clipDistance="20" nodeId="728" materialIds="9" castsShadows="true" receiveShadows="true"/>
-                    <Shape shapeId="118" name="dbl_gps_right" translation="-0.590734 3.36329 0.239788" rotation="-71.9261 -34.836 -14.1317" scale="4 4 4" clipDistance="20" nodeId="729" materialIds="9" castsShadows="true" receiveShadows="true"/>
-                    <Shape shapeId="118" name="dbl_gps_course" translation="-0.525721 3.3396 0.294986" rotation="-53.5091 13.9348 -92.4253" scale="5 1 2.2" clipDistance="20" nodeId="730" materialIds="9" castsShadows="true" receiveShadows="true"/>
-                    <Shape shapeId="119" name="dbl_mapPlane" translation="-0.522255 3.31011 0.27967" rotation="-113.377 39.2508 164.191" scale="0.2 0.01 0.15" nodeId="731" materialIds="13" distanceBlending="false">
+                    <Shape shapeId="118" name="dbl_gps_left" translation="-0.454388 3.32809 0.341278" rotation="-107.518 35.0913 166.839" scale="4 4 4" visibility="false" clipDistance="20" nodeId="728" materialIds="9" castsShadows="true" receiveShadows="true"/>
+                    <Shape shapeId="118" name="dbl_gps_right" translation="-0.590734 3.36329 0.239788" rotation="-71.9261 -34.836 -14.1317" scale="4 4 4" visibility="false" clipDistance="20" nodeId="729" materialIds="9" castsShadows="true" receiveShadows="true"/>
+                    <Shape shapeId="118" name="dbl_gps_course" translation="-0.525721 3.3396 0.294986" rotation="-53.5091 13.9348 -92.4253" scale="5 1 2.2" visibility="false" clipDistance="20" nodeId="730" materialIds="9" castsShadows="true" receiveShadows="true"/>
+                    <Shape shapeId="119" name="dbl_mapPlane" translation="-0.52694 3.30842 0.285964" rotation="-111.523 39.3984 164.658" scale="0.21 0.01 0.17" visibility="false" nodeId="731" materialIds="13" distanceBlending="false">
                       <Shape shapeId="119" name="dbl_position" translation="0 0.39 0" scale="0.02 0.02 0.02" nodeId="732" materialIds="17" distanceBlending="false"/>
                     </Shape>
                   </Shape>
