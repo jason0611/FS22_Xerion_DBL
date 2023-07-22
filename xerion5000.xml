@@ -1655,10 +1655,24 @@
 			<dashboard valueType="hlm" option="contour" displayType="EMITTER" node="dbl_hlm_contourS" baseColor="BLACK" emitColor="0 0 1 1" intensity="0.8" groups="MOTOR_ACTIVE" />
 
 			<!-- dbl upper (gps) dashboard -->
-			
-			<!-- GPS Terminal -->
-            <dashboard valueType="gps" displayType="EMITTER" node="display2" idleValue="-1" intensity="0.3" groups="PAGEU2 DBL_GPS_ON"/>
+			<!-- Global -->
+			<!-- GPS course -->
+			<dashboard valueType="gpsLane" option="dirRight" displayType="VISIBILITY" node="dbl_gps_left" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirRight" displayType="EMITTER" node="dbl_gps_left" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="VISIBILITY" node="dbl_gps_right" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsLane" option="dirLeft" displayType="EMITTER" node="dbl_gps_right" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+
+			<!-- GPS Terminal Page 1 -->			
+			<!-- MiniMap -->
+        	<dashboard valueType="miniMap" displayType="VISIBILITY" node="dbl_mapPlane" groups="PAGEU1 MOTOR_ACTIVE" />
+			<dashboard valueType="gps" option="active" displayType="VISIBILITY" node="dbl_gps_active2" groups="PAGEU1 MOTOR_ACTIVE" />
+			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_active2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1"groups="PAGEU1 MOTOR_ACTIVE" />
+			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_width2" groups="PAGEU1 DBL_GPS_ON MOTOR_ACTIVE" />
+			<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width2" numberColor="3 3 3 1" intensity="3" groups="PAGEU1 MOTOR_ACTIVE DBL_GPS_ON" />
+
+			<!-- GPS Terminal Page 4 -->			
 			<!-- GPS -->
+            <dashboard valueType="gps" displayType="EMITTER" node="display2" idleValue="-1" intensity="0.3" groups="PAGEU2 DBL_GPS_ON"/>
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_width" groups="PAGEU2 DBL_GPS_ON MOTOR_ACTIVE" />
 			<dashboard valueType="gps" option="active" displayType="VISIBILITY" node="dbl_gps_active" groups="PAGEU2 MOTOR_ACTIVE" />
 			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_active" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1" groups="PAGEU2 MOTOR_ACTIVE" />
@@ -1669,22 +1683,11 @@
 			<dashboard valueType="gps" option="lane-" displayType="VISIBILITY" node="dbl_gps_lane_minus" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" option="lane-" displayType="EMITTER" node="dbl_gps_lane_minus" emitColor="CLAAS_WHITE1" intensity="1" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" factor="0.1" displayType="NUMBER" numbers="dbl_gps_lane" numberColor="3 3 3 1" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
-			<!-- GPS course -->
-			<dashboard valueType="gpsLane" option="dirRight" displayType="VISIBILITY" node="dbl_gps_left" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirRight" displayType="EMITTER" node="dbl_gps_left" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirLeft" displayType="VISIBILITY" node="dbl_gps_right" groups="MOTOR_ACTIVE DBL_GPS_ON" />
-			<dashboard valueType="gpsLane" option="dirLeft" displayType="EMITTER" node="dbl_gps_right" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE DBL_GPS_ON" />
+			
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_course" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_course" baseColor="BLACK" emitColor="BLUE" intensity="1" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
 			<dashboard valueType="gpsLane" option="delta" displayType="ANIMATION" factor="100" animName="dbl_gps_course" minValueAnim="-50" maxValueAnim="50" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
-        	<!-- GPS Terminal Page 1 -->
-			<!-- MiniMap -->
-        	<dashboard valueType="miniMap" displayType="VISIBILITY" node="dbl_mapPlane" groups="PAGEU1 MOTOR_ACTIVE" />
-			<dashboard valueType="gps" option="active" displayType="VISIBILITY" node="dbl_gps_active2" groups="PAGEU1 MOTOR_ACTIVE" />
-			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_active2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1"groups="PAGEU1 MOTOR_ACTIVE" />
-			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_width2" groups="PAGEU1 DBL_GPS_ON MOTOR_ACTIVE" />
-			<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width2" numberColor="3 3 3 1" intensity="3" groups="PAGEU1 MOTOR_ACTIVE DBL_GPS_ON" />
-			<!-- GPS Terminal Page 2 -->
+        	
 			<!-- GPS Width-->
         	<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width" numberColor="3 3 3 1" intensity="3" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
         </dashboardLive>
