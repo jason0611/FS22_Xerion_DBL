@@ -921,7 +921,7 @@
                     <Shape shapeId="118" name="dbl_gps_right" translation="-0.590734 3.36329 0.239788" rotation="-71.9261 -34.836 -14.1317" scale="4 4 4" visibility="false" clipDistance="20" nodeId="1263" materialIds="9" castsShadows="true" receiveShadows="true"/>
                     <Shape shapeId="118" name="dbl_gps_course" translation="-0.525721 3.3396 0.294986" rotation="-53.5091 13.9348 -92.4253" scale="5 1 2.2" visibility="false" clipDistance="20" nodeId="1264" materialIds="9" castsShadows="true" receiveShadows="true"/>
                     <Shape shapeId="119" name="dbl_mapPlane" translation="-0.52694 3.30842 0.285964" rotation="-111.523 39.3984 164.658" scale="0.21 0.01 0.17" nodeId="1265" materialIds="20" distanceBlending="false">
-                      <Shape shapeId="119" name="dbl_position" translation="0 0.39 0" scale="0.02 0.02 0.02" nodeId="1266" materialIds="24" distanceBlending="false"/>
+                      <Shape shapeId="119" name="dbl_position" translation="0 0.39 0" scale="0.02 0.02 0.02" nodeId="1266" materialIds="20" distanceBlending="false"/>
                     </Shape>
                     <Shape shapeId="112" name="dbl_gps_active2" translation="-0.586866 3.3822 0.246395" rotation="-113.562 40.1322 164.753" scale="3 3 3" clipDistance="20" nodeId="1267" materialIds="10" castsShadows="true" receiveShadows="true"/>
                     <TransformGroup name="dbl_gpsWidth" translation="-0.464944 3.34498 0.351793" rotation="161.075 37.8626 168.492" scale="0.6 0.6 1" clipDistance="30" nodeId="1268">
