@@ -1,0 +1,345 @@
+<!-- This is the needed code for the accesibility of DashboadLive but them to your the xml-file to your mod -->
+<!-- Das sind die benötigten Code-Einträge für die Funktionalität von DashboardLive, diese müssen der gewünschten Mod.xml hinzugefügt werden-->
+
+<vehicle>
+	<lights>
+		<dashboards>
+			<dashboard displayType="VISIBILITY"	valueType="lightState"	node="LE_light_back"	lightTypes="0"		groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
+			<dashboard displayType="VISIBILITY"	valueType="lightState"	node="KR_Light_on"		lightTypes="0"		groups="MOTOR_ACTIVE"/>
+		</dashboards>
+	</lights>
+
+	<enterable>
+		<dashboards>
+			<dashboard displayType="TEXT"	valueType="time"        	node="LE_time"   		textColor="0 0 0 1"		textSize="0.005" 	textMask="00:00"		font="GENERIC_BOLD"		textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="operatingTime" 	node="KR_working_hours"	textColor="0 0 0  1"	textSize="0.008" 	textMask="00000.0 h." 	font="GENERIC" 			textAlignment="RIGHT" 		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="time"        	node="KR_Time"   		textColor="0 0 0 1" 	textSize="0.004" 	textMask="00:00"		font="GENERIC"			textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="time"        	node="KU_Time"   		textColor="0 0 0 1" 	textSize="0.006" 	textMask="00:00"		font="GENERIC"			textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
+		</dashboards>
+	</enterable>
+
+	<motorized>
+		<dashboards>
+			<dashboard displayType="TEXT"	valueType="speed"	node="KU_Speed" 	textColor="0.060 0.038 0.279 1" 	textSize="0.005" 	fontThickness="1" 	 textMask="00.00" font="GENERIC"		textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="speed" 	node="ZU_speed" 	textColor="0 0 0 1" 				textSize="0.007" 	fontThickness="1.6"  textMask="00.00" font="GENERIC" 	textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="speed" 	node="AM_speed" 	textColor="0 0 0 1" 				textSize="0.007" 	fontThickness="1.2"  textMask="00.0"  font="GENERIC" 	textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
+		</dashboards>
+	</motorized>
+
+	<animations>
+		<animation name="FillLevelBar_Fertilizer">
+			<part node="LE2_FL_fertilizer_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Seeds">
+			<part node="LE2_FL_seeds_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Front">
+			<part node="LE2_FL_front" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Krone">
+			<part node="KR_fillLevel_percent" startTime="0.0" endTime="1.0" startScale="0.01 1 1" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Zunhammer">
+			<part node="ZU_FillLevel_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Amazone">
+			<part node="AM_FillLevel_percent" startTime="0.0" endTime="1.0" startScale="0.01 1 1" endScale="1 1 1"/>
+		</animation>
+	</animations>
+
+	<dashboard>
+		<groups>
+			<!-- 3-Point-Attacher -->
+			<group name="DBL_3P_F_CONNECT" attacherJointIndices="4" /> <!-- Front -->
+			<group name="DBL_3P_B_CONNECT" attacherJointIndices="1" /> <!-- Back -->
+
+			<!-- Pages -->
+			<group name="PAGE1" dbl="page" page="1"/>
+			<group name="PAGE2" dbl="page" page="2"/>			
+		</groups>
+
+		<default>			
+			<!----------------------------------------------------------------------------------------- Lemken ------------------------------------------------------------------------------------------------------------------>
+			<dashboard displayType="VISIBILITY"		node="LemkenScreen"					groups="MOTOR_ACTIVE PAGE1"/>
+			<dashboard displayType="VISIBILITY"		node="LemkenScreen2"				groups="MOTOR_ACTIVE PAGE2"/>
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_fertilizer_percent"	groups="MOTOR_ACTIVE PAGE2"/>
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_seeds_percent"			groups="MOTOR_ACTIVE PAGE2"/>	
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_front"					groups="MOTOR_ACTIVE PAGE2"/>
+			<dashboard displayType="EMITTER" 		node="LE_FH_folding"   				baseColor="BLACK"	emitColor="BLACK"	intensity="0.3"		groups="MOTOR_ACTIVE" />	
+			<dashboard displayType="EMITTER" 		node="LE_HH_folding"   				baseColor="BLACK"	emitColor="BLACK"	intensity="0.3"		groups="MOTOR_ACTIVE" />
+			<!------------------------------------------------------------------------------------------ Krone ------------------------------------------------------------------------------------------------------------------>
+			<dashboard displayType="VISIBILITY"		node="KroneScreen"					groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="VISIBILITY"		node="KR_fillLevel_percent"			groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="VISIBILITY"		node="KR_Lock_Axle"					groups="MOTOR_ACTIVE"/>
+			<!------------------------------------------------------------------------------------------ Kuhn ------------------------------------------------------------------------------------------------------------------->
+			<dashboard displayType="VISIBILITY"		node="KuhnScreen"					groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="EMITTER" 		node="KU_HUP"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE" />	
+			<dashboard displayType="EMITTER" 		node="KU_HDW"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" 		node="KU_Pto2"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE" />
+			<dashboard displayType="EMITTER" 		node="KU_folding"   				baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE" />	
+			<!---------------------------------------------------------------------------------------- Zunhammer ---------------------------------------------------------------------------------------------------------------->			
+			<dashboard displayType="VISIBILITY"		node="ZunhammerScreen"				groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="VISIBILITY"		node="ZU_FillLevel_percent"			groups="MOTOR_ACTIVE"/>
+			<!----------------------------------------------------------------------------------------- Amazone ----------------------------------------------------------------------------------------------------------------->
+			<dashboard displayType="VISIBILITY"		node="AmazoneScreen"				groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="VISIBILITY"		node="AM_FillLevel_percent"			groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="VISIBILITY"		node="AM_minus"						groups="MOTOR_ACTIVE"/>
+		</default>
+		<dashboardLive>
+			<!-- CCI200 - 16.06.2023 - Pascal -->
+			<!----------------------------------------------------------------------------------------- Lemken -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="LE_tool_active" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="ridgeMarker" 	state="1"			joints="1"			displayType="VISIBILITY" 	node="LE1_Ridgemarker_left" 	groups="MOTOR_ACTIVE PAGE1"/>
+			<dashboard valueType="base" 	cmd="ridgeMarker" 	state="2"			joints="1"			displayType="VISIBILITY" 	node="LE1_Ridgemarker_right" 	groups="MOTOR_ACTIVE PAGE1"/>			
+			<!-- Attacher -->
+			<dashboard valueType="base" 	cmd="connected" 						joints="4" 			displayType="VISIBILITY" 	node="LE_FH" 					groups="MOTOR_ACTIVE DBL_3P_F_CONNECT"/>
+			<dashboard valueType="base" 	cmd="connected" 						joints="1" 			displayType="VISIBILITY" 	node="LE_HH" 					groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="1 4"		displayType="VISIBILITY" 	node="LE_no_tool" 				groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="4" 			displayType="VISIBILITY" 	node="LE_FH_folding" 			groups="MOTOR_ACTIVE DBL_3P_F_CONNECT"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="1" 			displayType="VISIBILITY" 	node="LE_HH_folding" 			groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>			
+			<!-- GPS -->
+			<dashboard valueType="gps" 							option="on"								displayType="VISIBILITY"	node="LE_gps_active" 			groups="MOTOR_ACTIVE" />
+			<dashboard valueType="gps" 							option="active"							displayType="VISIBILITY"	node="LE_guidiance_steering"	groups="MOTOR_ACTIVE" />
+			<dashboard valueType="gpsLane" 				 			   									displayType="TEXT" 			node="LE_gps_line" 				groups="MOTOR_ACTIVE"	textColor="0 0 0 1"		textSize="0.005"	fontThickness="1.3"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- Proseed -->
+			<dashboard valueType="proSeed" 						option="tram"		 					displayType="VISIBILITY"	node="LE_tramlines" 			groups="MOTOR_ACTIVE" />
+			<dashboard valueType="proSeed" 						option="fert"				   	   		displayType="VISIBILITY"	node="LE_fertilizer_on" 		groups="MOTOR_ACTIVE" />
+			<dashboard valueType="proSeed" 						option="timeuse"			 			displayType="TEXT" 			node="LE_ps_worktime" 			groups="MOTOR_ACTIVE"	textColor="0 0 0 1"		textSize="0.004"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="proSeed" 						option="areawork"			 			displayType="TEXT" 			node="LE_ps_area_worked" 		groups="MOTOR_ACTIVE"	textColor="0 0 0 1"		textSize="0.004"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="proSeed" 						option="seeduse"						displayType="TEXT" 			node="LE_ps_seed_usage" 		groups="MOTOR_ACTIVE"	textColor="0 0 0 1"		textSize="0.0055"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="1"			displayType="TEXT" 			node="LE_fill_level_liters" 			groups="MOTOR_ACTIVE"		trailer="1"				textColor="0 0 0 1"		textSize="0.0055"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="percent"	partition="1" 		joints="1"			displayType="TEXT" 			node="LE_fill_level_percent" 			groups="MOTOR_ACTIVE"		trailer="1"				textColor="0 0 0 1"		textSize="0.004"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			
+			<!-- Screen2 -->
+			<!-- FillLevels -->
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="2"		joints="1"			displayType="TEXT" 			node="LE2_filllevel_fertilizer_liters" 	groups="MOTOR_ACTIVE PAGE2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="1"			displayType="TEXT" 			node="LE2_filllevel_seeds_liters" 		groups="MOTOR_ACTIVE PAGE2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="4"			displayType="TEXT" 			node="LE2_filllevel_front_liters" 		groups="MOTOR_ACTIVE PAGE2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="2"		joints="1"			displayType="ANIMATION" 	animName="FillLevelBar_Fertilizer"		groups="MOTOR_ACTIVE"		trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="1"			displayType="ANIMATION" 	animName="FillLevelBar_Seeds"			groups="MOTOR_ACTIVE"		trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="4"			displayType="ANIMATION" 	animName="FillLevelBar_Front"			groups="MOTOR_ACTIVE"		trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<!----------------------------------------------------------------------------------------- Krone -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="tipping" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Is_Tipping" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Pickup_down" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Pickup_up" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="2 3"		displayType="VISIBILITY" 	node="KR_Pto_active" 			groups="MOTOR_ACTIVE"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Krone"			groups="MOTOR_ACTIVE"		trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="TEXT" 			node="KR_filllevel_percent_nb" 			groups="MOTOR_ACTIVE"		trailer="1"				textColor="0 0 0 1"		textSize="0.008"	textMask="000%"	font="GENERIC"		textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="2 3"		displayType="TEXT" 			node="KR_filllevel_liters" 				groups="MOTOR_ACTIVE"		trailer="1"				textColor="0 0 0 1"		textSize="0.008"	textMask="00000 L."	font="GENERIC"	textAlignment="RIGHT"/>
+			<!----------------------------------------------------------------------------------------- Kuhn -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="KU_Pto" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="KU_Pto2" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="1 2 3"		displayType="VISIBILITY" 	node="KU_HDW" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="1 2 3"		displayType="VISIBILITY" 	node="KU_HUP" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_folding" 		groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="folded" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_folded" 		groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="unfolded" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_unfolded" 		groups="MOTOR_ACTIVE"/>
+			<!----------------------------------------------------------------------------------------- Zunhammer ---------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="ptoRpm" 		factor="1.0"		joints="2 3"		displayType="TEXT" 			node="ZU_pumpspeed" 	groups="MOTOR_ACTIVE" fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.006"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="2 3"		displayType="VISIBILITY" 	node="ZU_Pto" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="2 3"		displayType="VISIBILITY" 	node="ZU_HDW" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="2 3"		displayType="VISIBILITY" 	node="ZU_HUP" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="folded" 							joints="2 3" 		displayType="VISIBILITY" 	node="ZU_folded" 		groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="unfolded" 							joints="2 3" 		displayType="VISIBILITY" 	node="ZU_unfolded" 		groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="2 3"		displayType="VISIBILITY" 	node="ZU_no_tool" 		groups="MOTOR_ACTIVE"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Zunhammer"		groups="MOTOR_ACTIVE"	trailer="1"		minValueAnim="1"	maxValueAnim="100"	/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="2 3"		displayType="TEXT" 			node="ZU_filllevel_liters" 				groups="MOTOR_ACTIVE"	trailer="1"		textColor="0 0 0 1"	textSize="0.007" fontThickness="1.6"	textMask="00000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- GPS -->
+			<dashboard valueType="gpsWidth" 																				displayType="TEXT"			node="ZU_workwidth" 					groups="MOTOR_ACTIVE" 					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="00.00"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!----------------------------------------------------------------------------------------- Amazone ---------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="AM_Pto" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="AM_Pto2" 			groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="1 2 3"		displayType="VISIBILITY" 	node="AM_no_tool" 		groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="base" 	cmd="ptoRpm" 		factor="4.0"		joints="1 2 3"		displayType="TEXT" 			node="AM_ptoRpm" 		groups="MOTOR_ACTIVE" fontThickness="1.2" textColor="0 0 0 1" 	textSize="0.007" textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="1 2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Amazone"		groups="MOTOR_ACTIVE"	trailer="1"		minValueAnim="1"	maxValueAnim="100"	/>
+			<!-- GPS -->
+			<dashboard valueType="gpsWidth" 																				displayType="TEXT"			node="AM_workwidth" 				groups="MOTOR_ACTIVE" 					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="00.00"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="gpsLane" 				 			   														displayType="TEXT" 			node="AM_gps_lane" 					groups="MOTOR_ACTIVE"					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="000"		font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="gps" 							option="lane+" 												displayType="VISIBILITY" 	node="AM_plus" 						groups="MOTOR_ACTIVE"/>	
+		</dashboardLive>
+	</dashboard>
+
+	<!-- put this to the configurations maybe you have to change the X with a number between 2 - 8 if there is already a configuration in your machine-->
+	<!-- fügt das zu dem Abschnitt der Konfigurationen hinzu. Sollten bereits Konfigurationen vorhanden sein ersetzt das X mit einer Zahl zwischen 2 - 8. -->
+	<designXConfigurations title="Isobus CCI200 Terminal">
+		<designXConfiguration name="$l10n_ui_no" price="0">
+			<objectChange node="CCI200" 					visibilityActive="false" 	visibilityInactive="true"/>
+		</designXConfiguration>
+		<designXConfiguration name="Lemken" price="5543">
+			<objectChange node="CCI200" 					visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Lemken" 			 		visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Zunhammer" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Kuhn" 			 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Krone" 			 			visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="Amazone" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="LemkenScreens" 			 	visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="ZunhammerScreens" 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KuhnScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KroneScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="AmazoneScreens" 			visibilityActive="false" 	visibilityInactive="true"/>			
+		</designXConfiguration>
+		<designXConfiguration name="Zunhammer" price="5543">
+			<objectChange node="CCI200" 					visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Lemken" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Zunhammer" 			 		visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Kuhn" 			 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Krone" 			 			visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="Amazone" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="LemkenScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="ZunhammerScreens" 			visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="KuhnScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KroneScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="AmazoneScreens" 			visibilityActive="false" 	visibilityInactive="true"/>				
+		</designXConfiguration>
+		<designXConfiguration name="Kuhn" price="5543">
+			<objectChange node="CCI200" 					visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Lemken" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Zunhammer" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Kuhn" 			 			visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Krone" 			 			visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="Amazone" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="LemkenScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="ZunhammerScreens" 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KuhnScreens" 			 	visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="KroneScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="AmazoneScreens" 			visibilityActive="false" 	visibilityInactive="true"/>				
+		</designXConfiguration>
+		<designXConfiguration name="Krone" price="5543">
+			<objectChange node="CCI200" 					visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Lemken" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Zunhammer" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Kuhn" 			 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Krone" 			 			visibilityActive="true" 	visibilityInactive="false"/>	
+			<objectChange node="Amazone" 			 		visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="LemkenScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="ZunhammerScreens" 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KuhnScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KroneScreens" 			 	visibilityActive="true" 	visibilityInactive="false"/>	
+			<objectChange node="AmazoneScreens" 			visibilityActive="false" 	visibilityInactive="true"/>			
+		</designXConfiguration>
+		<designXConfiguration name="Amazone" price="5543">
+			<objectChange node="CCI200" 					visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="Lemken" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Zunhammer" 			 		visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Kuhn" 			 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="Krone" 			 			visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="Amazone" 			 		visibilityActive="true" 	visibilityInactive="false"/>
+			<objectChange node="LemkenScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="ZunhammerScreens" 			visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KuhnScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>
+			<objectChange node="KroneScreens" 			 	visibilityActive="false" 	visibilityInactive="true"/>	
+			<objectChange node="AmazoneScreens" 			visibilityActive="true" 	visibilityInactive="false"/>
+		</designXConfiguration>
+	</designXConfigurations>
+
+	<!-- change the xxx with your node. Everything after the xxx should be the same! -->
+	<!-- Wechselt die xxx mit euren nodes aus. Alles danach sollte gleich bleiben! -->
+	<i3dMappings>
+		<i3dMapping id="CCI200" 								node="xxx"/>		   
+		<i3dMapping id="Lemken" 								node="xxx|0"/>		
+		<i3dMapping id="Zunhammer" 								node="xxx|1"/>
+		<i3dMapping id="Kuhn" 						    		node="xxx|2"/>
+		<i3dMapping id="Krone" 						    		node="xxx|3"/>
+		<i3dMapping id="Amazone" 								node="xxx|4"/>
+		<i3dMapping id="LemkenScreens" 							node="xxx|5|0"/>
+		<i3dMapping id="LemkenScreen" 							node="xxx|5|0|0|0"/>
+			<!-- icons -->
+			<i3dMapping id="LE_no_tool" 						node="xxx|5|0|1|0|0"/>
+			<i3dMapping id="LE_FH" 								node="xxx|5|0|1|0|1"/>
+			<i3dMapping id="LE_HH" 								node="xxx|5|0|1|0|2"/>
+			<i3dMapping id="LE_guidiance_steering" 				node="xxx|5|0|1|0|3"/>
+			<i3dMapping id="LE_tramlines" 						node="xxx|5|0|1|0|4"/>
+			<i3dMapping id="LE_gps_active" 						node="xxx|5|0|1|0|5"/>
+			<i3dMapping id="LE_tool_active" 					node="xxx|5|0|1|0|6"/>
+			<i3dMapping id="LE_light_back" 						node="xxx|5|0|1|0|7"/>
+			<i3dMapping id="LE_fertilizer_on" 					node="xxx|5|0|1|0|8"/>
+			<i3dMapping id="LE_FH_folding" 						node="xxx|5|0|1|0|9"/>
+			<i3dMapping id="LE_HH_folding" 						node="xxx|5|0|1|0|10"/>
+			<!-- numbers -->
+			<i3dMapping id="LE_time" 							node="xxx|5|0|2|0|0"/>
+			<i3dMapping id="LE_date" 							node="xxx|5|0|2|0|1"/>
+			<i3dMapping id="LE_gps_line" 						node="xxx|5|0|2|0|2"/>
+			<i3dMapping id="LE_fill_level_percent" 				node="xxx|5|0|2|0|3"/>
+			<i3dMapping id="LE_ps_worktime" 					node="xxx|5|0|2|0|4"/>
+			<i3dMapping id="LE_ps_area_worked" 					node="xxx|5|0|2|0|5"/>
+			<i3dMapping id="LE_fill_level_liters" 				node="xxx|5|0|2|0|6"/>
+			<i3dMapping id="LE_ps_seed_usage" 					node="xxx|5|0|2|0|7"/>
+		<i3dMapping id="LemkenScreen2" 							node="xxx|5|0|0|1"/>	
+			<!-- icons -->
+			<i3dMapping id="LE1_Ridgemarker_left" 				node="xxx|5|0|1|1|0"/>
+			<i3dMapping id="LE1_Ridgemarker_right" 				node="xxx|5|0|1|1|1"/>
+			<i3dMapping id="LE2_FL_fertilizer_percent" 			node="xxx|5|0|1|2|0"/>
+			<i3dMapping id="LE2_FL_seeds_percent" 				node="xxx|5|0|1|2|1"/>
+			<i3dMapping id="LE2_FL_front" 						node="xxx|5|0|1|2|2"/>
+			<!-- numbers -->
+			<i3dMapping id="LE2_filllevel_fertilizer_liters" 	node="xxx|5|0|2|1|0"/>
+			<i3dMapping id="LE2_filllevel_seeds_liters" 		node="xxx|5|0|2|1|1"/>
+			<i3dMapping id="LE2_filllevel_front_liters" 		node="xxx|5|0|2|1|2"/>			
+		<i3dMapping id="ZunhammerScreens" 						node="xxx|5|1"/>
+		<i3dMapping id="ZunhammerScreen" 						node="xxx|5|1|0|0" />
+			<!-- icons -->
+			<i3dMapping id="ZU_FillLevel_percent" 				node="xxx|5|1|1|0|0"/>
+			<i3dMapping id="ZU_HDW" 							node="xxx|5|1|1|0|1"/>
+			<i3dMapping id="ZU_HUP" 							node="xxx|5|1|1|0|2"/>
+			<i3dMapping id="ZU_Pto" 							node="xxx|5|1|1|0|3"/>
+			<i3dMapping id="ZU_unfolded" 						node="xxx|5|1|1|0|4"/>
+			<i3dMapping id="ZU_folded" 							node="xxx|5|1|1|0|5"/>
+			<i3dMapping id="ZU_no_tool" 						node="xxx|5|1|1|0|6"/>
+			<!-- numbers -->
+			<i3dMapping id="ZU_workwidth" 						node="xxx|5|1|2|0|0"/>
+			<i3dMapping id="ZU_speed" 							node="xxx|5|1|2|0|1"/>
+			<i3dMapping id="ZU_pumpspeed" 						node="xxx|5|1|2|0|2"/>
+			<i3dMapping id="ZU_filllevel_liters" 				node="xxx|5|1|2|0|3"/>				
+		<i3dMapping id="KuhnScreens" 							node="xxx|5|2"/>
+		<i3dMapping id="KuhnScreen" 							node="xxx|5|2|0|0"/>
+			<!-- icons -->
+			<i3dMapping id="KU_Pto" 							node="xxx|5|2|1|0|0"/>
+			<i3dMapping id="KU_Pto2" 							node="xxx|5|2|1|0|1"/>
+			<i3dMapping id="KU_HDW" 							node="xxx|5|2|1|0|2"/>
+			<i3dMapping id="KU_HUP" 							node="xxx|5|2|1|0|3"/>
+			<i3dMapping id="KU_folding" 						node="xxx|5|2|1|0|4"/>
+			<i3dMapping id="KU_folded" 							node="xxx|5|2|1|0|5"/>
+			<i3dMapping id="KU_unfolded" 						node="xxx|5|2|1|0|6"/>
+			<!-- numbers -->
+			<i3dMapping id="KU_Time" 							node="xxx|5|2|2|0|0"/>
+			<i3dMapping id="KU_Speed" 							node="xxx|5|2|2|0|1"/>		
+		<i3dMapping id="KroneScreens" 							node="xxx|5|3"/>
+		<i3dMapping id="KroneScreen" 							node="xxx|5|3|0|0"/>
+			<!-- icons -->
+			<i3dMapping id="KR_Light_on" 						node="xxx|5|3|1|0|0"/>
+			<i3dMapping id="KR_Lock_Axle" 						node="xxx|5|3|1|0|1"/>
+			<i3dMapping id="KR_fillLevel_percent" 				node="xxx|5|3|1|0|2"/>
+			<i3dMapping id="KR_Is_Tipping" 						node="xxx|5|3|1|0|3"/>
+			<i3dMapping id="KR_Pickup_up" 						node="xxx|5|3|1|0|4"/>
+			<i3dMapping id="KR_Pickup_down" 					node="xxx|5|3|1|0|5"/>
+			<i3dMapping id="KR_Pto_active" 						node="xxx|5|3|1|0|6"/>
+			<!-- numbers -->
+			<i3dMapping id="KR_Time" 							node="xxx|5|3|2|0|0"/>
+			<i3dMapping id="KR_filllevel_liters" 				node="xxx|5|3|2|0|1"/>
+			<i3dMapping id="KR_working_hours" 					node="xxx|5|3|2|0|2"/>
+			<i3dMapping id="KR_filllevel_percent_nb" 			node="xxx|5|3|2|0|3"/>			
+		<i3dMapping id="AmazoneScreens" 						node="xxx|5|4"/>
+		<i3dMapping id="AmazoneScreen" 							node="xxx|5|4|0|0"/>
+			<!-- icons -->
+			<i3dMapping id="AM_FillLevel_percent" 				node="xxx|5|4|1|0|0"/>
+			<i3dMapping id="AM_Pto" 							node="xxx|5|4|1|0|1"/>
+			<i3dMapping id="AM_Pto2" 							node="xxx|5|4|1|0|2"/>
+			<i3dMapping id="AM_minus" 							node="xxx|5|4|1|0|3"/>
+			<i3dMapping id="AM_plus" 							node="xxx|5|4|1|0|4"/>	
+			<i3dMapping id="AM_no_tool" 						node="xxx|5|4|1|0|5"/>	
+			<!-- numbers -->
+			<i3dMapping id="AM_speed" 							node="xxx|5|4|2|0|0"/>
+			<i3dMapping id="AM_workwidth" 						node="xxx|5|4|2|0|1"/>
+			<i3dMapping id="AM_gps_lane" 						node="xxx|5|4|2|0|2"/>
+			<i3dMapping id="AM_ptoRpm" 							node="xxx|5|4|2|0|3"/>
+	</i3dMappings>
+</vehicle>

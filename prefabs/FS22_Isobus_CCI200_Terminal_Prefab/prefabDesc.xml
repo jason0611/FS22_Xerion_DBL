@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<prefabDesc descVersion="1">
+    <author>Farming Dud's</author>
+	<contributors>Glowins Modschmiede</contributors>
+    <version>1.0.0.0</version>
+	<title>
+        <en>Isobus Terminal CCI200</en>
+    </title>
+	<description>
+        <en>
+<![CDATA[
+Terminal of the "Competence Center ISOBUS". The CCI200 is offered by a variaty of different manufacturers.
+You can choose between Lemken, Zunhammer, Kuhn, Krone and Amazone. Each manufacturer has its own field of specialization.
+That means every Terminal supports a special device on your machine.
+
+Along to the 3D Modell and its textures comes a second feature of this prefab.
+The Terminal fully supports the Dashboard Live Script, published by "Glowins Modschmiede".
+The needed xml code is given too. Because of this it is only for PC mods.
+]]>
+		</en>
+		<de>
+<![CDATA[
+Terminal des "Competence Center ISOBUS". Das CCI200 wird von einer Vielzahl verschiedener Hersteller angeboten.
+Sie haben die Wahl zwischen Lemken, Zunhammer, Kuhn, Krone und Amazone. Jeder Hersteller hat sein eigenes Spezialgebiet.
+Das heißt, jedes Terminal unterstützt ein spezielles Gerät an Ihrer Maschine.
+
+Neben dem 3D Modell und seinen Texturen gibt es noch ein zweites Feature dieses Prefabs.
+Das Terminal unterstützt vollständig das Dashboard Live Script, welches von "Glowins Modschmiede" veröffentlicht wurde.
+Der benötigte xml-Code ist ebenfalls enthalten. Aus diesem Grund ist es nur für PC-Mods geeignet.
+]]>
+		</de>
+		<fr>
+<![CDATA[
+Terminal du "Competence Center ISOBUS". Le CCI200 est proposé par plusieurs de  fabricants différents. 
+Vous avez le choix entre Lemken, Zunhammer, Kuhn, Krone et Amazone. Chaque fabricant a sa spécialité propre. 
+Cela signifie que chaque terminal appartient à une machine spécifique.
+
+Inclus dans le prefab ne sont pas seulement les modèles 3D et les textures correspondantes mais les terminals 
+supportent entièrement le Dashboard Live Script, qui a été publié par "Glowins Modschmiede".
+Parce-que le code xml nécessaire pour le fonctionnement du script est également inclus le prefab ne convient qu'aux mods PC.
+]]>
+		</fr>
+    </description>
+	<categories>
+        <category>Other</category>
+    </categories>
+	<brands>
+        <brand name="Isobus" title="ISOBUS" image="brand_isobus.dds"/>
+    </brands>
+	<iconFilename>icon_CCI200.dds</iconFilename>
+	<prefabs>
+		<prefab name="CCI200 Terminal" i3dFilename="Isobus_CCI200_Terminal.i3d" />
+    </prefabs>
+</prefabDesc>

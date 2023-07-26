@@ -1494,6 +1494,7 @@
             <group name="PAGE2" dbl="page" group="1" page="2"/>
 			<group name="PAGEU1" dbl="page" group="2" page="1"/>
 			<group name="PAGEU2" dbl="page" group="2" page="2"/>
+			<group name="GROUP2" dbl="page" group="2" />
 			
 			<!-- Front -->
 			<group name="DBL_F_CONNECT" attacherJointIndices="4 6" />
@@ -1541,7 +1542,10 @@
 			<dashboard displayType="VISIBILITY" node="dbl_pto_b" groups="MOTOR_ACTIVE" />
 			
         </default>
-        <dashboardLive>
+		<dashboardLive>
+			<!-- base terminal -->
+			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_group1" groups="MOTOR_ACTIVE" />
+			
 			<!-- Front Attacher -->
 			<!-- 3-Point-Attacher -->
 			<dashboard valueType="base" cmd="lifted" joints="6" displayType="VISIBILITY" node="dbl_att_f_3p_up" groups="MOTOR_ACTIVE DBL_3P_F_CONNECT" />
@@ -1664,12 +1668,13 @@
 
 			<!-- GPS Terminal Page 1 -->			
 			<!-- MiniMap -->
+			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_group2" groups="MOTOR_ACTIVE" />
         	<dashboard valueType="miniMap" cmd="map" displayType="VISIBILITY" node="dbl_mapPlane" groups="PAGEU1 MOTOR_ACTIVE" />
         	<dashboard valueType="miniMap" cmd="posMarker" displayType="VISIBILITY" node="dbl_mapMarker" groups="PAGEU1 MOTOR_ACTIVE"/>
-			<dashboard valueType="gps" option="active" displayType="VISIBILITY" node="dbl_gps_active2" groups="PAGEU1 MOTOR_ACTIVE" />
-			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_active2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_WHITE1" intensity="1"groups="PAGEU1 MOTOR_ACTIVE" />
+			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_active2" groups="PAGEU1 MOTOR_ACTIVE" />
+			<dashboard valueType="gps" option="active" displayType="EMITTER" node="dbl_gps_active2" baseColor="CLAAS_DARKGREY2" emitColor="CLAAS_GREEN1" intensity="1" groups="PAGEU1 MOTOR_ACTIVE" />
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_width2" groups="PAGEU1 DBL_GPS_ON MOTOR_ACTIVE" />
-			<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width2" numberColor="3 3 3 1" intensity="3" groups="PAGEU1 MOTOR_ACTIVE DBL_GPS_ON" />
+			<dashboard valueType="gpsWidth" factor="1" displayType="TEXT" node="dbl_gps_width2" textColor="0 1 0 3" textAlignment="RIGHT" textMask="00.00m" textSize="0.007" font="GENERIC" groups="PAGEU1 MOTOR_ACTIVE DBL_GPS_ON" />
 
 			<!-- GPS Terminal Page 2 -->			
 			<!-- GPS -->
@@ -2161,6 +2166,8 @@
 		<i3dMapping id="dbl_mapMarker" node="0>0|7|0|0|11|7|8|0" />
 		<i3dMapping id="dbl_gps_active2" node="0>0|7|0|0|11|7|9" />
 		<i3dMapping id="dbl_gps_width2" node="0>0|7|0|0|11|7|10" />
+		<i3dMapping id="dbl_group1" node="0>0|7|0|0|1|1|10|50" />
+		<i3dMapping id="dbl_group2" node="0>0|7|0|0|11|7|11" />
 		
     </i3dMappings>
 </vehicle>
