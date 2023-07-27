@@ -904,6 +904,8 @@
                 <state value="0" rotation="0 0 -65"/>
                 <state value="3" rotation="0 0 -95"/>
             </dashboard>
+            <dashboard displayType="VISIBILITY"	valueType="lightState"	node="LE_light_back"	lightTypes="0"		groups="MOTOR_ACTIVE DBL_3P_B_CONNECT"/>
+			<dashboard displayType="VISIBILITY"	valueType="lightState"	node="KR_Light_on"		lightTypes="0"		groups="MOTOR_ACTIVE"/>
         </dashboards>
     </lights>
     <dynamicallyLoadedParts>
@@ -1166,6 +1168,10 @@
         </mirrors>
 		<dashboards>
 			<dashboard valueType="time" displayType="TEXT" node="dbl_clock" textMask="00:00" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE" />
+			<dashboard displayType="TEXT"	valueType="time"        	node="LE_time"   		textColor="0 0 0 1"		textSize="0.005" 	textMask="00:00"		font="GENERIC_BOLD"		textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="operatingTime" 	node="KR_working_hours"	textColor="0 0 0  1"	textSize="0.008" 	textMask="00000.0 h." 	font="GENERIC" 			textAlignment="RIGHT" 		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="time"        	node="KR_Time"   		textColor="0 0 0 1" 	textSize="0.004" 	textMask="00:00"		font="GENERIC"			textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="time"        	node="KU_Time"   		textColor="0 0 0 1" 	textSize="0.006" 	textMask="00:00"		font="GENERIC"			textAlignment="CENTER"		groups="MOTOR_ACTIVE"/>
 		</dashboards>
 	</enterable>
     <motorized>
@@ -1251,6 +1257,9 @@
             </dashboard>
             <dashboard displayType="VISIBILITY" valueType="directionForward" node="iconForward_decals" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="VISIBILITY" valueType="directionBackward" node="iconBackward_decals" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="TEXT"	valueType="speed"	node="KU_Speed" 	textColor="0.060 0.038 0.279 1" 	textSize="0.005" 	fontThickness="1" 	 textMask="00.00" font="GENERIC"		textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="speed" 	node="ZU_speed" 	textColor="0 0 0 1" 				textSize="0.007" 	fontThickness="1.6"  textMask="00.00" font="GENERIC" 	textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="TEXT" 	valueType="speed" 	node="AM_speed" 	textColor="0 0 0 1" 				textSize="0.007" 	fontThickness="1.2"  textMask="00.0"  font="GENERIC" 	textAlignment="RIGHT"  	groups="MOTOR_ACTIVE"/>
         </dashboards>
     </motorized>
     <drivable>
@@ -1396,6 +1405,24 @@
 		<animation name="dbl_gps_course" soundVolumeFactor="1.0">
 			<part node="dbl_gps_course" startTime="0.0" endTime="1.0" startTrans="-0.467 3.327 0.338" endTrans="-0.582 3.354 0.246" visibility="true" />
 		</animation>
+		<animation name="FillLevelBar_Fertilizer">
+			<part node="LE2_FL_fertilizer_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Seeds">
+			<part node="LE2_FL_seeds_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Front">
+			<part node="LE2_FL_front" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Krone">
+			<part node="KR_fillLevel_percent" startTime="0.0" endTime="1.0" startScale="0.01 1 1" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Zunhammer">
+			<part node="ZU_FillLevel_percent" startTime="0.0" endTime="1.0" startScale="1 1 0.01" endScale="1 1 1"/>
+		</animation>
+		<animation name="FillLevelBar_Amazone">
+			<part node="AM_FillLevel_percent" startTime="0.0" endTime="1.0" startScale="0.01 1 1" endScale="1 1 1"/>
+		</animation>
     </animations>
     <cylindered>
         <movingTools>
@@ -1492,9 +1519,31 @@
             <!-- Pages -->
             <group name="PAGE1" dbl="page" group="1" page="1"/>
             <group name="PAGE2" dbl="page" group="1" page="2"/>
+            <group name="GROUP1" dbl="page" group="1" />
+            
 			<group name="PAGEU1" dbl="page" group="2" page="1"/>
 			<group name="PAGEU2" dbl="page" group="2" page="2"/>
 			<group name="GROUP2" dbl="page" group="2" />
+			
+			<!-- Terminal vorhanden -->
+			<group name="CCI200" dbl="base_hasTypeDesc" dblOption="sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine manureTrailer forageWagon mowerForageWagon windrower windrowerUnpowered manureBarrel sprayer fertilizerSpreader saltSpreader" attacherJointIndices="1 2 3 5"/>
+			
+			<!-- Lemken: Saehmaschine -->
+			<group name="PAGECCLE" dbl="base_hasTypeDesc" dblOption="sowingMachine fertilizingSowingMachine cultivatingSowingMachine" attacherJointIndices="1 2 3 5"/>
+			<group name="PAGECCL1" dbl="page" group="3" page="1"/>
+			<group name="PAGECCL2" dbl="page" group="3" page="2"/>
+			<group name="GROUP3" dbl="page" group="3" />
+			
+			<!-- Krone: Ladewagen -->
+			<group name="PAGECCKR" dbl="base_hasTypeDesc" dblOption="manureTrailer forageWagon mowerForageWagon" attacherJointIndices="1 2 3 5"/>
+			
+			<!-- Kuhn: Schwader -->
+			<group name="PAGECCKU" dbl="base_hasTypeDesc" dblOption="windrower windrowerUnpowered" attacherJointIndices="1 2 3 5"/>
+			
+			<!-- Zunhammer: Guellefaesser -->
+			<group name="PAGECCZU" dbl="base_hasTypeDesc" dblOption="manureBarrel" attacherJointIndices="1 2 3 5"/>
+			
+			<group name="PAGECCAM" dbl="base_hasTypeDesc" dblOption="sprayer fertilizerSpreader saltSpreader" attacherJointIndices="1 2 3 5"/>
 			
 			<!-- Front -->
 			<group name="DBL_F_CONNECT" attacherJointIndices="4 6" />
@@ -1538,14 +1587,56 @@
             <dashboard displayType="VISIBILITY" node="decal1" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="VISIBILITY" node="cruiseControlDecal" groups="MOTOR_ACTIVE"/>
             
+			<!-- Gruppensymbole -->
+			<dashboard displayType="VISIBILITY" node="dbl_group1" groups="MOTOR_ACTIVE GROUP1" />
+			<dashboard displayType="VISIBILITY" node="dbl_group2" groups="MOTOR_ACTIVE GROUP2" />
+			<dashboard displayType="VISIBILITY" node="dbl_group3" groups="MOTOR_ACTIVE GROUP3 PAGECCLE" />
+			<dashboard displayType="EMITTER" node="dbl_group1" emitColor="CLAAS_RED1" groups="MOTOR_ACTIVE GROUP1"/>
+			<dashboard displayType="EMITTER" node="dbl_group2" emitColor="CLAAS_RED1" groups="MOTOR_ACTIVE GROUP2"/>
+			<dashboard displayType="EMITTER" node="dbl_group3" emitColor="CLAAS_RED1" groups="MOTOR_ACTIVE GROUP3 PAGECCLE"/>
+			
 			<!-- PTO -->
 			<dashboard displayType="VISIBILITY" node="dbl_pto_b" groups="MOTOR_ACTIVE" />
 			
+			<!-- CCI200 -->
+			<dashboard displayType="VISIBILITY" 	node="CCI200"						groups="CCI200"/>
+			<!----------------------------------------------------------------------------------------- Lemken ------------------------------------------------------------------------------------------------------------------>
+			<dashboard displayType="VISIBILITY"		node="Lemken"						groups="PAGECCLE"/>
+			<dashboard displayType="VISIBILITY"		node="LemkenScreens"				groups="PAGECCLE"/>
+			<dashboard displayType="VISIBILITY"		node="LemkenScreen"					groups="MOTOR_ACTIVE PAGECCLE PAGECCL1"/>
+			<dashboard displayType="VISIBILITY"		node="LemkenScreen2"				groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"/>
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_fertilizer_percent"	groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"/>
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_seeds_percent"			groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"/>	
+			<dashboard displayType="VISIBILITY"		node="LE2_FL_front"					groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"/>
+			<dashboard displayType="EMITTER" 		node="LE_FH_folding"   				baseColor="BLACK"	emitColor="BLACK"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCLE" />	
+			<dashboard displayType="EMITTER" 		node="LE_HH_folding"   				baseColor="BLACK"	emitColor="BLACK"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCLE" />
+			<!------------------------------------------------------------------------------------------ Krone ------------------------------------------------------------------------------------------------------------------>
+			<dashboard displayType="VISIBILITY"		node="Krone"						groups="PAGECCKR"/>
+			<dashboard displayType="VISIBILITY"		node="KroneScreens"					groups="PAGECCKR"/>
+			<dashboard displayType="VISIBILITY"		node="KroneScreen"					groups="MOTOR_ACTIVE PAGECCKR"/>
+			<dashboard displayType="VISIBILITY"		node="KR_fillLevel_percent"			groups="MOTOR_ACTIVE PAGECCKR"/>
+			<dashboard displayType="VISIBILITY"		node="KR_Lock_Axle"					groups="MOTOR_ACTIVE PAGECCKR"/>
+			<!------------------------------------------------------------------------------------------ Kuhn ------------------------------------------------------------------------------------------------------------------->
+			<dashboard displayType="VISIBILITY"		node="Kuhn"							groups="PAGECCKU"/>
+			<dashboard displayType="VISIBILITY"		node="KuhnScreens"					groups="PAGECCKU"/>
+			<dashboard displayType="VISIBILITY"		node="KuhnScreen"					groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard displayType="EMITTER" 		node="KU_HUP"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCKU" />	
+			<dashboard displayType="EMITTER" 		node="KU_HDW"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCKU" />
+			<dashboard displayType="EMITTER" 		node="KU_Pto2"   					baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCKU" />
+			<dashboard displayType="EMITTER" 		node="KU_folding"   				baseColor="KUHN_RED2"	emitColor="KUHN_RED2"	intensity="0.3"		groups="MOTOR_ACTIVE PAGECCKU" />	
+			<!---------------------------------------------------------------------------------------- Zunhammer ---------------------------------------------------------------------------------------------------------------->			
+			<dashboard displayType="VISIBILITY"		node="Zunhammer"					groups="PAGECCZU"/>
+			<dashboard displayType="VISIBILITY"		node="ZunhammerScreens"				groups="PAGECCZU"/>
+			<dashboard displayType="VISIBILITY"		node="ZunhammerScreen"				groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard displayType="VISIBILITY"		node="ZU_FillLevel_percent"			groups="MOTOR_ACTIVE PAGECCZU"/>
+			<!----------------------------------------------------------------------------------------- Amazone ----------------------------------------------------------------------------------------------------------------->
+			<dashboard displayType="VISIBILITY"		node="Amazone"						groups="PAGECCAM"/>
+			<dashboard displayType="VISIBILITY"		node="AmazoneScreens"				groups="PAGECCAM"/>
+			<dashboard displayType="VISIBILITY"		node="AmazoneScreen"				groups="MOTOR_ACTIVE PAGECCAM"/>
+			<dashboard displayType="VISIBILITY"		node="AM_FillLevel_percent"			groups="MOTOR_ACTIVE PAGECCAM"/>
+			<dashboard displayType="VISIBILITY"		node="AM_minus"						groups="MOTOR_ACTIVE PAGECCAM"/>
         </default>
 		<dashboardLive>
-			<!-- base terminal -->
-			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_group1" groups="MOTOR_ACTIVE" />
-			
 			<!-- Front Attacher -->
 			<!-- 3-Point-Attacher -->
 			<dashboard valueType="base" cmd="lifted" joints="6" displayType="VISIBILITY" node="dbl_att_f_3p_up" groups="MOTOR_ACTIVE DBL_3P_F_CONNECT" />
@@ -1668,7 +1759,6 @@
 
 			<!-- GPS Terminal Page 1 -->			
 			<!-- MiniMap -->
-			<dashboard valueType="base" cmd="" displayType="VISIBILITY" node="dbl_group2" groups="MOTOR_ACTIVE" />
         	<dashboard valueType="miniMap" cmd="map" displayType="VISIBILITY" node="dbl_mapPlane" groups="PAGEU1 MOTOR_ACTIVE" />
         	<dashboard valueType="miniMap" cmd="posMarker" displayType="VISIBILITY" node="dbl_mapMarker" groups="PAGEU1 MOTOR_ACTIVE"/>
 			<dashboard valueType="gps" displayType="VISIBILITY" node="dbl_gps_active2" groups="PAGEU1 MOTOR_ACTIVE" />
@@ -1696,6 +1786,86 @@
         	
 			<!-- GPS Width-->
         	<dashboard valueType="gpsWidth" factor="10" displayType="NUMBER" numbers="dbl_gps_width" numberColor="3 3 3 1" intensity="3" groups="PAGEU2 MOTOR_ACTIVE DBL_GPS_ON" />
+        	
+        	<!-- CCI200 - 16.06.2023 - Pascal -->
+			<!----------------------------------------------------------------------------------------- Lemken -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="LE_tool_active" 			groups="MOTOR_ACTIVE PAGECCLE"/>
+			<dashboard valueType="base" 	cmd="ridgeMarker" 	state="1"			joints="1"			displayType="VISIBILITY" 	node="LE1_Ridgemarker_left" 	groups="MOTOR_ACTIVE PAGECCLE PAGECCL1"/>
+			<dashboard valueType="base" 	cmd="ridgeMarker" 	state="2"			joints="1"			displayType="VISIBILITY" 	node="LE1_Ridgemarker_right" 	groups="MOTOR_ACTIVE PAGECCLE PAGECCL1"/>			
+			<!-- Attacher -->
+			<dashboard valueType="base" 	cmd="connected" 						joints="4" 			displayType="VISIBILITY" 	node="LE_FH" 					groups="MOTOR_ACTIVE DBL_3P_F_CONNECT PAGECCLE"/>
+			<dashboard valueType="base" 	cmd="connected" 						joints="1" 			displayType="VISIBILITY" 	node="LE_HH" 					groups="MOTOR_ACTIVE DBL_3P_B_CONNECT PAGECCLE"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="1 4"		displayType="VISIBILITY" 	node="LE_no_tool" 				groups="MOTOR_ACTIVE PAGECCLE"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="4" 			displayType="VISIBILITY" 	node="LE_FH_folding" 			groups="MOTOR_ACTIVE DBL_3P_F_CONNECT PAGECCLE"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="1" 			displayType="VISIBILITY" 	node="LE_HH_folding" 			groups="MOTOR_ACTIVE DBL_3P_B_CONNECT PAGECCLE"/>			
+			<!-- GPS -->
+			<dashboard valueType="gps" 							option="on"								displayType="VISIBILITY"	node="LE_gps_active" 			groups="MOTOR_ACTIVE PAGECCLE" />
+			<dashboard valueType="gps" 							option="active"							displayType="VISIBILITY"	node="LE_guidiance_steering"	groups="MOTOR_ACTIVE PAGECCLE" />
+			<dashboard valueType="gpsLane" 				 			   									displayType="TEXT" 			node="LE_gps_line" 				groups="MOTOR_ACTIVE PAGECCLE"	textColor="0 0 0 1"		textSize="0.005"	fontThickness="1.3"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- Proseed -->
+			<dashboard valueType="proSeed" 						option="tram"		 					displayType="VISIBILITY"	node="LE_tramlines" 			groups="MOTOR_ACTIVE PAGECCLE" />
+			<dashboard valueType="proSeed" 						option="fert"				   	   		displayType="VISIBILITY"	node="LE_fertilizer_on" 		groups="MOTOR_ACTIVE PAGECCLE" />
+			<dashboard valueType="proSeed" 						option="timeuse"			 			displayType="TEXT" 			node="LE_ps_worktime" 			groups="MOTOR_ACTIVE PAGECCLE"	textColor="0 0 0 1"		textSize="0.004"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="proSeed" 						option="areawork"			 			displayType="TEXT" 			node="LE_ps_area_worked" 		groups="MOTOR_ACTIVE PAGECCLE"	textColor="0 0 0 1"		textSize="0.004"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="proSeed" 						option="seeduse"						displayType="TEXT" 			node="LE_ps_seed_usage" 		groups="MOTOR_ACTIVE PAGECCLE"	textColor="0 0 0 1"		textSize="0.0055"	textMask="00.0"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="1"			displayType="TEXT" 			node="LE_fill_level_liters" 			groups="MOTOR_ACTIVE PAGECCLE"		trailer="1"				textColor="0 0 0 1"		textSize="0.0055"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="percent"	partition="1" 		joints="1"			displayType="TEXT" 			node="LE_fill_level_percent" 			groups="MOTOR_ACTIVE PAGECCLE"		trailer="1"				textColor="0 0 0 1"		textSize="0.004"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			
+			<!-- Screen2 -->
+			<!-- FillLevels -->
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="2"		joints="1"			displayType="TEXT" 			node="LE2_filllevel_fertilizer_liters" 	groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="1"			displayType="TEXT" 			node="LE2_filllevel_seeds_liters" 		groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="4"			displayType="TEXT" 			node="LE2_filllevel_front_liters" 		groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"							textColor="0 0 0 1"		textSize="0.0045"	textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="2"		joints="1"			displayType="ANIMATION" 	animName="FillLevelBar_Fertilizer"		groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"	trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="1"			displayType="ANIMATION" 	animName="FillLevelBar_Seeds"			groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"	trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="4"			displayType="ANIMATION" 	animName="FillLevelBar_Front"			groups="MOTOR_ACTIVE PAGECCLE PAGECCL2"	trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<!----------------------------------------------------------------------------------------- Krone -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="tipping" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Is_Tipping" 			groups="MOTOR_ACTIVE PAGECCKR"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Pickup_down" 			groups="MOTOR_ACTIVE PAGECCKR"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="2 3"		displayType="VISIBILITY" 	node="KR_Pickup_up" 			groups="MOTOR_ACTIVE PAGECCKR"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="2 3"		displayType="VISIBILITY" 	node="KR_Pto_active" 			groups="MOTOR_ACTIVE PAGECCKR"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Krone"			groups="MOTOR_ACTIVE PAGECCKR"		trailer="1" 			minValueAnim="1"    	maxValueAnim="100"	/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="TEXT" 			node="KR_filllevel_percent_nb" 			groups="MOTOR_ACTIVE PAGECCKR"		trailer="1"				textColor="0 0 0 1"		textSize="0.008"	textMask="000%"	font="GENERIC"		textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="2 3"		displayType="TEXT" 			node="KR_filllevel_liters" 				groups="MOTOR_ACTIVE PAGECCKR"		trailer="1"				textColor="0 0 0 1"		textSize="0.008"	textMask="00000 L."	font="GENERIC"	textAlignment="RIGHT"/>
+			<!----------------------------------------------------------------------------------------- Kuhn -------------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="KU_Pto" 			groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="KU_Pto2" 			groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="1 2 3"		displayType="VISIBILITY" 	node="KU_HDW" 			groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="1 2 3"		displayType="VISIBILITY" 	node="KU_HUP" 			groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="folding" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_folding" 		groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="folded" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_folded" 		groups="MOTOR_ACTIVE PAGECCKU"/>
+			<dashboard valueType="base" 	cmd="unfolded" 							joints="1 2 3" 		displayType="VISIBILITY" 	node="KU_unfolded" 		groups="MOTOR_ACTIVE PAGECCKU"/>
+			<!----------------------------------------------------------------------------------------- Zunhammer ---------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="ptoRpm" 		factor="1.0"		joints="2 3"		displayType="TEXT" 			node="ZU_pumpspeed" 	groups="MOTOR_ACTIVE PAGECCZU" fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.006"	textMask="000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="2 3"		displayType="VISIBILITY" 	node="ZU_Pto" 			groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard valueType="base" 	cmd="lowered" 							joints="2 3"		displayType="VISIBILITY" 	node="ZU_HDW" 			groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard valueType="base" 	cmd="lifted" 							joints="2 3"		displayType="VISIBILITY" 	node="ZU_HUP" 			groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard valueType="base" 	cmd="folded" 							joints="2 3" 		displayType="VISIBILITY" 	node="ZU_folded" 		groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard valueType="base" 	cmd="unfolded" 							joints="2 3" 		displayType="VISIBILITY" 	node="ZU_unfolded" 		groups="MOTOR_ACTIVE PAGECCZU"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="2 3"		displayType="VISIBILITY" 	node="ZU_no_tool" 		groups="MOTOR_ACTIVE PAGECCZU"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Zunhammer"		groups="MOTOR_ACTIVE PAGECCZU"	trailer="1"		minValueAnim="1"	maxValueAnim="100"	/>
+			<dashboard valueType="base" 	cmd="fillLevel"		option="abs"		partition="1"		joints="2 3"		displayType="TEXT" 			node="ZU_filllevel_liters" 				groups="MOTOR_ACTIVE PAGECCZU"	trailer="1"		textColor="0 0 0 1"	textSize="0.007" fontThickness="1.6"	textMask="00000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- GPS -->
+			<dashboard valueType="gpsWidth" 																				displayType="TEXT"			node="ZU_workwidth" 					groups="MOTOR_ACTIVE PAGECCZU" 					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="00.00"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!----------------------------------------------------------------------------------------- Amazone ---------------------------------------------------------------------------------------------------------------->
+			<!-- Base -->
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="AM_Pto" 			groups="MOTOR_ACTIVE PAGECCAM"/>
+			<dashboard valueType="base" 	cmd="pto" 								joints="1 2 3"		displayType="VISIBILITY" 	node="AM_Pto2" 			groups="MOTOR_ACTIVE PAGECCAM"/>
+			<dashboard valueType="base" 	cmd="disconnected" 						joints="1 2 3"		displayType="VISIBILITY" 	node="AM_no_tool" 		groups="MOTOR_ACTIVE PAGECCAM"/>
+			<dashboard valueType="base" 	cmd="ptoRpm" 		factor="4.0"		joints="1 2 3"		displayType="TEXT" 			node="AM_ptoRpm" 		groups="MOTOR_ACTIVE PAGECCAM" fontThickness="1.2" textColor="0 0 0 1" 	textSize="0.007" textMask="0000"	font="GENERIC"	textAlignment="RIGHT"/>
+			<!-- FillLevels -->
+			<dashboard valueType="base"		cmd="fillLevel"		option="percent"	partition="1"		joints="1 2 3"		displayType="ANIMATION" 	animName="FillLevelBar_Amazone"		groups="MOTOR_ACTIVE PAGECCAM"	trailer="1"		minValueAnim="1"	maxValueAnim="100"	/>
+			<!-- GPS -->
+			<dashboard valueType="gpsWidth" 															displayType="TEXT"			node="AM_workwidth" 				groups="MOTOR_ACTIVE PAGECCAM" 					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="00.00"	font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="gpsLane" 				 			   									displayType="TEXT" 			node="AM_gps_lane" 					groups="MOTOR_ACTIVE PAGECCAM"					fontThickness="1.5"	textColor="0 0 0 1"		textSize="0.005"	textMask="000"		font="GENERIC"	textAlignment="RIGHT"/>
+			<dashboard valueType="gps" 							option="lane+" 							displayType="VISIBILITY" 	node="AM_plus" 						groups="MOTOR_ACTIVE PAGECCAM"/>	
         </dashboardLive>
     </dashboard>
     <ai>
@@ -2170,6 +2340,7 @@
 		<i3dMapping id="dbl_gps_width2" node="0>0|7|0|0|11|7|10" />
 		<i3dMapping id="dbl_group1" node="0>0|7|0|0|1|1|10|50" />
 		<i3dMapping id="dbl_group2" node="0>0|7|0|0|11|7|11" />
+		<i3dMapping id="dbl_group3" node="0>0|7|0|0|1|1|15|6" />
 		
 		<!-- CCI200 -->
 		<i3dMapping id="CCI200" 								node="0>0|7|0|0|1|1|15"/>		   
