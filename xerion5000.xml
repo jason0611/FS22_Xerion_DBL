@@ -1526,7 +1526,7 @@
 			<group name="GROUP2" dbl="page" group="2" />
 			
 			<!-- Terminal vorhanden -->
-			<group name="CCI200" dbl="base_hasTypeDesc" dblOption="sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine manureTrailer forageWagon mowerForageWagon windrower windrowerUnpowered manureBarrel sprayer fertilizerSpreader saltSpreader" attacherJointIndices="1 2 3 5"/>
+			<group name="CCI200" dbl="base_hasTypeDesc" dblOption="sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine sowingMachine fertilizingSowingMachine cultivatingSowingMachine manureTrailer forageWagon mowerForageWagon windrower windrowerUnpowered manureBarrel sprayer fertilizerSpreader saltSpreader planter" attacherJointIndices="1 2 3 5"/>
 			
 			<!-- Lemken: Saehmaschine -->
 			<group name="PAGECCLE" dbl="base_hasTypeDesc" dblOption="sowingMachine fertilizingSowingMachine cultivatingSowingMachine planter" attacherJointIndices="1 2 3 5"/>
