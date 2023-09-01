@@ -1600,7 +1600,7 @@
 			
 			<!-- CCI200 -->
 			<dashboard displayType="VISIBILITY" 	node="CCI200"						groups="CCI200"/>
-			<!----------------------------------------------------------------------------------------- Lemken ------------------------------------------------------------------------------------------------------------------>
+			<!------------------------------------------------------------------------------------------ Lemken ----------------------------------------------------------------------------------------------------------------->
 			<dashboard displayType="VISIBILITY"		node="Lemken"						groups="PAGECCLE"/>
 			<dashboard displayType="VISIBILITY"		node="LemkenScreens"				groups="PAGECCLE"/>
 			<dashboard displayType="VISIBILITY"		node="LemkenScreen"					groups="MOTOR_ACTIVE PAGECCLE PAGECCL1"/>
@@ -1731,6 +1731,30 @@
 			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="2" partition="2" option="pct" displayType="TEXT" textMask="000 %" node="dbl_fillLevelT2P2" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE2" />
 			<dashboard valueType="base" cmd="fillLevel" joints="6" trailer="1" partition="0" option="pct" displayType="TEXT" textMask="000 %" node="dbl_fillLevelF" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_3P_F_CONNECT PAGE2" /> 
 			-->
+			
+			<!-- CVT addon -->
+			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="VISIBILITY" node="dbl_cvtLevel1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="EMITTER" node="dbl_cvtLevel1" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="EMITTER" node="dbl_cvtLevel1Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="VISIBILITY" node="dbl_cvtLevel2" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="EMITTER" node="dbl_cvtLevel2" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="EMITTER" node="dbl_cvtLevel2Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="1 2 3 4" displayType="VISIBILITY" node="dbl_cvtAccRamp1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="1 2 3 4" displayType="EMITTER" node="dbl_cvtAccRamp1" emitColor="CLAAS_GREEN1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="2 3 4" displayType="VISIBILITY" node="dbl_cvtAccRamp2" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="2 3 4" displayType="EMITTER" node="dbl_cvtAccRamp2" emitColor="CLAAS_GREEN1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="3 4" displayType="VISIBILITY" node="dbl_cvtAccRamp3" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="3 4" displayType="EMITTER" node="dbl_cvtAccRamp3" emitColor="CLAAS_GREEN1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="4" displayType="VISIBILITY" node="dbl_cvtAccRamp4" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="accRamp" state="4" displayType="EMITTER" node="dbl_cvtAccRamp4" emitColor="CLAAS_GREEN1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="4 8 15 17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="4 8 15 17" displayType="EMITTER" node="dbl_cvtBrakeRamp1" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="8 15 17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp2" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="8 15 17" displayType="EMITTER" node="dbl_cvtBrakeRamp2" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="15 17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp3" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="15 17" displayType="EMITTER" node="dbl_cvtBrakeRamp3" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp4" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="EMITTER" node="dbl_cvtBrakeRamp4" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
 			
 			<!-- VCA -->
 			<dashboard valueType="vca" cmd="park" displayType="VISIBILITY" node="dbl_Park" groups="MOTOR_ACTIVE" />
@@ -2333,6 +2357,19 @@
 		
 		<i3dMapping id="dbl_testNode" node="0>0|7|0|0|1|1|10|24" />
 		
+		<i3dMapping id="dbl_cvtLevel1" node="0>0|7|0|0|1|1|10|51" />
+		<i3dMapping id="dbl_cvtLevel2" node="0>0|7|0|0|1|1|10|52" />
+		<i3dMapping id="dbl_cvtLevel1Led" node="0>0|7|0|0|1|1|10|61" />
+		<i3dMapping id="dbl_cvtLevel2Led" node="0>0|7|0|0|1|1|10|62" />
+		<i3dMapping id="dbl_cvtAccRamp1" node="0>0|7|0|0|1|1|10|53" />
+		<i3dMapping id="dbl_cvtAccRamp2" node="0>0|7|0|0|1|1|10|54" />
+		<i3dMapping id="dbl_cvtAccRamp3" node="0>0|7|0|0|1|1|10|55" />
+		<i3dMapping id="dbl_cvtAccRamp4" node="0>0|7|0|0|1|1|10|56" />
+		<i3dMapping id="dbl_cvtBrakeRamp1" node="0>0|7|0|0|1|1|10|57" />
+		<i3dMapping id="dbl_cvtBrakeRamp2" node="0>0|7|0|0|1|1|10|58" />
+		<i3dMapping id="dbl_cvtBrakeRamp3" node="0>0|7|0|0|1|1|10|59" />
+		<i3dMapping id="dbl_cvtBrakeRamp4" node="0>0|7|0|0|1|1|10|60" />
+		
 		<!-- GPS-Terminal -->
 		<i3dMapping id="dbl_mapPlane" node="0>0|7|0|0|11|7|8" />
 		<i3dMapping id="dbl_mapMarker" node="0>0|7|0|0|11|7|8|0" />
@@ -2340,105 +2377,105 @@
 		<i3dMapping id="dbl_gps_width2" node="0>0|7|0|0|11|7|10" />
 		<i3dMapping id="dbl_group1" node="0>0|7|0|0|1|1|10|50" />
 		<i3dMapping id="dbl_group2" node="0>0|7|0|0|11|7|11" />
-		<i3dMapping id="dbl_group3" node="0>0|7|0|0|1|1|15|6" />
+		<i3dMapping id="dbl_group3" node="0>0|7|0|0|11|7|12|6" />
 		
 		<!-- CCI200 -->
-		<i3dMapping id="CCI200" 								node="0>0|7|0|0|1|1|15"/>		   
-		<i3dMapping id="Lemken" 								node="0>0|7|0|0|1|1|15|0"/>		
-		<i3dMapping id="Zunhammer" 								node="0>0|7|0|0|1|1|15|1"/>
-		<i3dMapping id="Kuhn" 						    		node="0>0|7|0|0|1|1|15|2"/>
-		<i3dMapping id="Krone" 						    		node="0>0|7|0|0|1|1|15|3"/>
-		<i3dMapping id="Amazone" 								node="0>0|7|0|0|1|1|15|4"/>
-		<i3dMapping id="LemkenScreens" 							node="0>0|7|0|0|1|1|15|5|0"/>
-		<i3dMapping id="LemkenScreen" 							node="0>0|7|0|0|1|1|15|5|0|0|0"/>
+		<i3dMapping id="CCI200" 								node="0>0|7|0|0|11|7|12"/>		   
+		<i3dMapping id="Lemken" 								node="0>0|7|0|0|11|7|12|0"/>		
+		<i3dMapping id="Zunhammer" 								node="0>0|7|0|0|11|7|12|1"/>
+		<i3dMapping id="Kuhn" 						    		node="0>0|7|0|0|11|7|12|2"/>
+		<i3dMapping id="Krone" 						    		node="0>0|7|0|0|11|7|12|3"/>
+		<i3dMapping id="Amazone" 								node="0>0|7|0|0|11|7|12|4"/>
+		<i3dMapping id="LemkenScreens" 							node="0>0|7|0|0|11|7|12|5|0"/>
+		<i3dMapping id="LemkenScreen" 							node="0>0|7|0|0|11|7|12|5|0|0|0"/>
 			<!-- icons -->
-			<i3dMapping id="LE_no_tool" 						node="0>0|7|0|0|1|1|15|5|0|1|0|0"/>
-			<i3dMapping id="LE_FH" 								node="0>0|7|0|0|1|1|15|5|0|1|0|1"/>
-			<i3dMapping id="LE_HH" 								node="0>0|7|0|0|1|1|15|5|0|1|0|2"/>
-			<i3dMapping id="LE_guidiance_steering" 				node="0>0|7|0|0|1|1|15|5|0|1|0|3"/>
-			<i3dMapping id="LE_tramlines" 						node="0>0|7|0|0|1|1|15|5|0|1|0|4"/>
-			<i3dMapping id="LE_gps_active" 						node="0>0|7|0|0|1|1|15|5|0|1|0|5"/>
-			<i3dMapping id="LE_tool_active" 					node="0>0|7|0|0|1|1|15|5|0|1|0|6"/>
-			<i3dMapping id="LE_light_back" 						node="0>0|7|0|0|1|1|15|5|0|1|0|7"/>
-			<i3dMapping id="LE_fertilizer_on" 					node="0>0|7|0|0|1|1|15|5|0|1|0|8"/>
-			<i3dMapping id="LE_FH_folding" 						node="0>0|7|0|0|1|1|15|5|0|1|0|9"/>
-			<i3dMapping id="LE_HH_folding" 						node="0>0|7|0|0|1|1|15|5|0|1|0|10"/>
+			<i3dMapping id="LE_no_tool" 						node="0>0|7|0|0|11|7|12|5|0|1|0|0"/>
+			<i3dMapping id="LE_FH" 								node="0>0|7|0|0|11|7|12|5|0|1|0|1"/>
+			<i3dMapping id="LE_HH" 								node="0>0|7|0|0|11|7|12|5|0|1|0|2"/>
+			<i3dMapping id="LE_guidiance_steering" 				node="0>0|7|0|0|11|7|12|5|0|1|0|3"/>
+			<i3dMapping id="LE_tramlines" 						node="0>0|7|0|0|11|7|12|5|0|1|0|4"/>
+			<i3dMapping id="LE_gps_active" 						node="0>0|7|0|0|11|7|12|5|0|1|0|5"/>
+			<i3dMapping id="LE_tool_active" 					node="0>0|7|0|0|11|7|12|5|0|1|0|6"/>
+			<i3dMapping id="LE_light_back" 						node="0>0|7|0|0|11|7|12|5|0|1|0|7"/>
+			<i3dMapping id="LE_fertilizer_on" 					node="0>0|7|0|0|11|7|12|5|0|1|0|8"/>
+			<i3dMapping id="LE_FH_folding" 						node="0>0|7|0|0|11|7|12|5|0|1|0|9"/>
+			<i3dMapping id="LE_HH_folding" 						node="0>0|7|0|0|11|7|12|5|0|1|0|10"/>
 			<!-- numbers -->
-			<i3dMapping id="LE_time" 							node="0>0|7|0|0|1|1|15|5|0|2|0|0"/>
-			<i3dMapping id="LE_date" 							node="0>0|7|0|0|1|1|15|5|0|2|0|1"/>
-			<i3dMapping id="LE_gps_line" 						node="0>0|7|0|0|1|1|15|5|0|2|0|2"/>
-			<i3dMapping id="LE_fill_level_percent" 				node="0>0|7|0|0|1|1|15|5|0|2|0|3"/>
-			<i3dMapping id="LE_ps_worktime" 					node="0>0|7|0|0|1|1|15|5|0|2|0|4"/>
-			<i3dMapping id="LE_ps_area_worked" 					node="0>0|7|0|0|1|1|15|5|0|2|0|5"/>
-			<i3dMapping id="LE_fill_level_liters" 				node="0>0|7|0|0|1|1|15|5|0|2|0|6"/>
-			<i3dMapping id="LE_ps_seed_usage" 					node="0>0|7|0|0|1|1|15|5|0|2|0|7"/>
-		<i3dMapping id="LemkenScreen2" 							node="0>0|7|0|0|1|1|15|5|0|0|1"/>	
+			<i3dMapping id="LE_time" 							node="0>0|7|0|0|11|7|12|5|0|2|0|0"/>
+			<i3dMapping id="LE_date" 							node="0>0|7|0|0|11|7|12|5|0|2|0|1"/>
+			<i3dMapping id="LE_gps_line" 						node="0>0|7|0|0|11|7|12|5|0|2|0|2"/>
+			<i3dMapping id="LE_fill_level_percent" 				node="0>0|7|0|0|11|7|12|5|0|2|0|3"/>
+			<i3dMapping id="LE_ps_worktime" 					node="0>0|7|0|0|11|7|12|5|0|2|0|4"/>
+			<i3dMapping id="LE_ps_area_worked" 					node="0>0|7|0|0|11|7|12|5|0|2|0|5"/>
+			<i3dMapping id="LE_fill_level_liters" 				node="0>0|7|0|0|11|7|12|5|0|2|0|6"/>
+			<i3dMapping id="LE_ps_seed_usage" 					node="0>0|7|0|0|11|7|12|5|0|2|0|7"/>
+		<i3dMapping id="LemkenScreen2" 							node="0>0|7|0|0|11|7|12|5|0|0|1"/>	
 			<!-- icons -->
-			<i3dMapping id="LE1_Ridgemarker_left" 				node="0>0|7|0|0|1|1|15|5|0|1|1|0"/>
-			<i3dMapping id="LE1_Ridgemarker_right" 				node="0>0|7|0|0|1|1|15|5|0|1|1|1"/>
-			<i3dMapping id="LE2_FL_fertilizer_percent" 			node="0>0|7|0|0|1|1|15|5|0|1|2|0"/>
-			<i3dMapping id="LE2_FL_seeds_percent" 				node="0>0|7|0|0|1|1|15|5|0|1|2|1"/>
-			<i3dMapping id="LE2_FL_front" 						node="0>0|7|0|0|1|1|15|5|0|1|2|2"/>
+			<i3dMapping id="LE1_Ridgemarker_left" 				node="0>0|7|0|0|11|7|12|5|0|1|1|0"/>
+			<i3dMapping id="LE1_Ridgemarker_right" 				node="0>0|7|0|0|11|7|12|5|0|1|1|1"/>
+			<i3dMapping id="LE2_FL_fertilizer_percent" 			node="0>0|7|0|0|11|7|12|5|0|1|2|0"/>
+			<i3dMapping id="LE2_FL_seeds_percent" 				node="0>0|7|0|0|11|7|12|5|0|1|2|1"/>
+			<i3dMapping id="LE2_FL_front" 						node="0>0|7|0|0|11|7|12|5|0|1|2|2"/>
 			<!-- numbers -->
-			<i3dMapping id="LE2_filllevel_fertilizer_liters" 	node="0>0|7|0|0|1|1|15|5|0|2|1|0"/>
-			<i3dMapping id="LE2_filllevel_seeds_liters" 		node="0>0|7|0|0|1|1|15|5|0|2|1|1"/>
-			<i3dMapping id="LE2_filllevel_front_liters" 		node="0>0|7|0|0|1|1|15|5|0|2|1|2"/>			
-		<i3dMapping id="ZunhammerScreens" 						node="0>0|7|0|0|1|1|15|5|1"/>
-		<i3dMapping id="ZunhammerScreen" 						node="0>0|7|0|0|1|1|15|5|1|0|0" />
+			<i3dMapping id="LE2_filllevel_fertilizer_liters" 	node="0>0|7|0|0|11|7|12|5|0|2|1|0"/>
+			<i3dMapping id="LE2_filllevel_seeds_liters" 		node="0>0|7|0|0|11|7|12|5|0|2|1|1"/>
+			<i3dMapping id="LE2_filllevel_front_liters" 		node="0>0|7|0|0|11|7|12|5|0|2|1|2"/>			
+		<i3dMapping id="ZunhammerScreens" 						node="0>0|7|0|0|11|7|12|5|1"/>
+		<i3dMapping id="ZunhammerScreen" 						node="0>0|7|0|0|11|7|12|5|1|0|0" />
 			<!-- icons -->
-			<i3dMapping id="ZU_FillLevel_percent" 				node="0>0|7|0|0|1|1|15|5|1|1|0|0"/>
-			<i3dMapping id="ZU_HDW" 							node="0>0|7|0|0|1|1|15|5|1|1|0|1"/>
-			<i3dMapping id="ZU_HUP" 							node="0>0|7|0|0|1|1|15|5|1|1|0|2"/>
-			<i3dMapping id="ZU_Pto" 							node="0>0|7|0|0|1|1|15|5|1|1|0|3"/>
-			<i3dMapping id="ZU_unfolded" 						node="0>0|7|0|0|1|1|15|5|1|1|0|4"/>
-			<i3dMapping id="ZU_folded" 							node="0>0|7|0|0|1|1|15|5|1|1|0|5"/>
-			<i3dMapping id="ZU_no_tool" 						node="0>0|7|0|0|1|1|15|5|1|1|0|6"/>
+			<i3dMapping id="ZU_FillLevel_percent" 				node="0>0|7|0|0|11|7|12|5|1|1|0|0"/>
+			<i3dMapping id="ZU_HDW" 							node="0>0|7|0|0|11|7|12|5|1|1|0|1"/>
+			<i3dMapping id="ZU_HUP" 							node="0>0|7|0|0|11|7|12|5|1|1|0|2"/>
+			<i3dMapping id="ZU_Pto" 							node="0>0|7|0|0|11|7|12|5|1|1|0|3"/>
+			<i3dMapping id="ZU_unfolded" 						node="0>0|7|0|0|11|7|12|5|1|1|0|4"/>
+			<i3dMapping id="ZU_folded" 							node="0>0|7|0|0|11|7|12|5|1|1|0|5"/>
+			<i3dMapping id="ZU_no_tool" 						node="0>0|7|0|0|11|7|12|5|1|1|0|6"/>
 			<!-- numbers -->
-			<i3dMapping id="ZU_workwidth" 						node="0>0|7|0|0|1|1|15|5|1|2|0|0"/>
-			<i3dMapping id="ZU_speed" 							node="0>0|7|0|0|1|1|15|5|1|2|0|1"/>
-			<i3dMapping id="ZU_pumpspeed" 						node="0>0|7|0|0|1|1|15|5|1|2|0|2"/>
-			<i3dMapping id="ZU_filllevel_liters" 				node="0>0|7|0|0|1|1|15|5|1|2|0|3"/>				
-		<i3dMapping id="KuhnScreens" 							node="0>0|7|0|0|1|1|15|5|2"/>
-		<i3dMapping id="KuhnScreen" 							node="0>0|7|0|0|1|1|15|5|2|0|0"/>
+			<i3dMapping id="ZU_workwidth" 						node="0>0|7|0|0|11|7|12|5|1|2|0|0"/>
+			<i3dMapping id="ZU_speed" 							node="0>0|7|0|0|11|7|12|5|1|2|0|1"/>
+			<i3dMapping id="ZU_pumpspeed" 						node="0>0|7|0|0|11|7|12|5|1|2|0|2"/>
+			<i3dMapping id="ZU_filllevel_liters" 				node="0>0|7|0|0|11|7|12|5|1|2|0|3"/>				
+		<i3dMapping id="KuhnScreens" 							node="0>0|7|0|0|11|7|12|5|2"/>
+		<i3dMapping id="KuhnScreen" 							node="0>0|7|0|0|11|7|12|5|2|0|0"/>
 			<!-- icons -->
-			<i3dMapping id="KU_Pto" 							node="0>0|7|0|0|1|1|15|5|2|1|0|0"/>
-			<i3dMapping id="KU_Pto2" 							node="0>0|7|0|0|1|1|15|5|2|1|0|1"/>
-			<i3dMapping id="KU_HDW" 							node="0>0|7|0|0|1|1|15|5|2|1|0|2"/>
-			<i3dMapping id="KU_HUP" 							node="0>0|7|0|0|1|1|15|5|2|1|0|3"/>
-			<i3dMapping id="KU_folding" 						node="0>0|7|0|0|1|1|15|5|2|1|0|4"/>
-			<i3dMapping id="KU_folded" 							node="0>0|7|0|0|1|1|15|5|2|1|0|5"/>
-			<i3dMapping id="KU_unfolded" 						node="0>0|7|0|0|1|1|15|5|2|1|0|6"/>
+			<i3dMapping id="KU_Pto" 							node="0>0|7|0|0|11|7|12|5|2|1|0|0"/>
+			<i3dMapping id="KU_Pto2" 							node="0>0|7|0|0|11|7|12|5|2|1|0|1"/>
+			<i3dMapping id="KU_HDW" 							node="0>0|7|0|0|11|7|12|5|2|1|0|2"/>
+			<i3dMapping id="KU_HUP" 							node="0>0|7|0|0|11|7|12|5|2|1|0|3"/>
+			<i3dMapping id="KU_folding" 						node="0>0|7|0|0|11|7|12|5|2|1|0|4"/>
+			<i3dMapping id="KU_folded" 							node="0>0|7|0|0|11|7|12|5|2|1|0|5"/>
+			<i3dMapping id="KU_unfolded" 						node="0>0|7|0|0|11|7|12|5|2|1|0|6"/>
 			<!-- numbers -->
-			<i3dMapping id="KU_Time" 							node="0>0|7|0|0|1|1|15|5|2|2|0|0"/>
-			<i3dMapping id="KU_Speed" 							node="0>0|7|0|0|1|1|15|5|2|2|0|1"/>		
-		<i3dMapping id="KroneScreens" 							node="0>0|7|0|0|1|1|15|5|3"/>
-		<i3dMapping id="KroneScreen" 							node="0>0|7|0|0|1|1|15|5|3|0|0"/>
+			<i3dMapping id="KU_Time" 							node="0>0|7|0|0|11|7|12|5|2|2|0|0"/>
+			<i3dMapping id="KU_Speed" 							node="0>0|7|0|0|11|7|12|5|2|2|0|1"/>		
+		<i3dMapping id="KroneScreens" 							node="0>0|7|0|0|11|7|12|5|3"/>
+		<i3dMapping id="KroneScreen" 							node="0>0|7|0|0|11|7|12|5|3|0|0"/>
 			<!-- icons -->
-			<i3dMapping id="KR_Light_on" 						node="0>0|7|0|0|1|1|15|5|3|1|0|0"/>
-			<i3dMapping id="KR_Lock_Axle" 						node="0>0|7|0|0|1|1|15|5|3|1|0|1"/>
-			<i3dMapping id="KR_fillLevel_percent" 				node="0>0|7|0|0|1|1|15|5|3|1|0|2"/>
-			<i3dMapping id="KR_Is_Tipping" 						node="0>0|7|0|0|1|1|15|5|3|1|0|3"/>
-			<i3dMapping id="KR_Pickup_up" 						node="0>0|7|0|0|1|1|15|5|3|1|0|4"/>
-			<i3dMapping id="KR_Pickup_down" 					node="0>0|7|0|0|1|1|15|5|3|1|0|5"/>
-			<i3dMapping id="KR_Pto_active" 						node="0>0|7|0|0|1|1|15|5|3|1|0|6"/>
+			<i3dMapping id="KR_Light_on" 						node="0>0|7|0|0|11|7|12|5|3|1|0|0"/>
+			<i3dMapping id="KR_Lock_Axle" 						node="0>0|7|0|0|11|7|12|5|3|1|0|1"/>
+			<i3dMapping id="KR_fillLevel_percent" 				node="0>0|7|0|0|11|7|12|5|3|1|0|2"/>
+			<i3dMapping id="KR_Is_Tipping" 						node="0>0|7|0|0|11|7|12|5|3|1|0|3"/>
+			<i3dMapping id="KR_Pickup_up" 						node="0>0|7|0|0|11|7|12|5|3|1|0|4"/>
+			<i3dMapping id="KR_Pickup_down" 					node="0>0|7|0|0|11|7|12|5|3|1|0|5"/>
+			<i3dMapping id="KR_Pto_active" 						node="0>0|7|0|0|11|7|12|5|3|1|0|6"/>
 			<!-- numbers -->
-			<i3dMapping id="KR_Time" 							node="0>0|7|0|0|1|1|15|5|3|2|0|0"/>
-			<i3dMapping id="KR_filllevel_liters" 				node="0>0|7|0|0|1|1|15|5|3|2|0|1"/>
-			<i3dMapping id="KR_working_hours" 					node="0>0|7|0|0|1|1|15|5|3|2|0|2"/>
-			<i3dMapping id="KR_filllevel_percent_nb" 			node="0>0|7|0|0|1|1|15|5|3|2|0|3"/>			
-		<i3dMapping id="AmazoneScreens" 						node="0>0|7|0|0|1|1|15|5|4"/>
-		<i3dMapping id="AmazoneScreen" 							node="0>0|7|0|0|1|1|15|5|4|0|0"/>
+			<i3dMapping id="KR_Time" 							node="0>0|7|0|0|11|7|12|5|3|2|0|0"/>
+			<i3dMapping id="KR_filllevel_liters" 				node="0>0|7|0|0|11|7|12|5|3|2|0|1"/>
+			<i3dMapping id="KR_working_hours" 					node="0>0|7|0|0|11|7|12|5|3|2|0|2"/>
+			<i3dMapping id="KR_filllevel_percent_nb" 			node="0>0|7|0|0|11|7|12|5|3|2|0|3"/>			
+		<i3dMapping id="AmazoneScreens" 						node="0>0|7|0|0|11|7|12|5|4"/>
+		<i3dMapping id="AmazoneScreen" 							node="0>0|7|0|0|11|7|12|5|4|0|0"/>
 			<!-- icons -->
-			<i3dMapping id="AM_FillLevel_percent" 				node="0>0|7|0|0|1|1|15|5|4|1|0|0"/>
-			<i3dMapping id="AM_Pto" 							node="0>0|7|0|0|1|1|15|5|4|1|0|1"/>
-			<i3dMapping id="AM_Pto2" 							node="0>0|7|0|0|1|1|15|5|4|1|0|2"/>
-			<i3dMapping id="AM_minus" 							node="0>0|7|0|0|1|1|15|5|4|1|0|3"/>
-			<i3dMapping id="AM_plus" 							node="0>0|7|0|0|1|1|15|5|4|1|0|4"/>	
-			<i3dMapping id="AM_no_tool" 						node="0>0|7|0|0|1|1|15|5|4|1|0|5"/>	
+			<i3dMapping id="AM_FillLevel_percent" 				node="0>0|7|0|0|11|7|12|5|4|1|0|0"/>
+			<i3dMapping id="AM_Pto" 							node="0>0|7|0|0|11|7|12|5|4|1|0|1"/>
+			<i3dMapping id="AM_Pto2" 							node="0>0|7|0|0|11|7|12|5|4|1|0|2"/>
+			<i3dMapping id="AM_minus" 							node="0>0|7|0|0|11|7|12|5|4|1|0|3"/>
+			<i3dMapping id="AM_plus" 							node="0>0|7|0|0|11|7|12|5|4|1|0|4"/>	
+			<i3dMapping id="AM_no_tool" 						node="0>0|7|0|0|11|7|12|5|4|1|0|5"/>	
 			<!-- numbers -->
-			<i3dMapping id="AM_speed" 							node="0>0|7|0|0|1|1|15|5|4|2|0|0"/>
-			<i3dMapping id="AM_workwidth" 						node="0>0|7|0|0|1|1|15|5|4|2|0|1"/>
-			<i3dMapping id="AM_gps_lane" 						node="0>0|7|0|0|1|1|15|5|4|2|0|2"/>
-			<i3dMapping id="AM_ptoRpm" 							node="0>0|7|0|0|1|1|15|5|4|2|0|3"/>
+			<i3dMapping id="AM_speed" 							node="0>0|7|0|0|11|7|12|5|4|2|0|0"/>
+			<i3dMapping id="AM_workwidth" 						node="0>0|7|0|0|11|7|12|5|4|2|0|1"/>
+			<i3dMapping id="AM_gps_lane" 						node="0>0|7|0|0|11|7|12|5|4|2|0|2"/>
+			<i3dMapping id="AM_ptoRpm" 							node="0>0|7|0|0|11|7|12|5|4|2|0|3"/>
     </i3dMappings>
 </vehicle>
