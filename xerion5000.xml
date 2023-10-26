@@ -1772,6 +1772,8 @@
 			<!-- VCA -->
 			<dashboard valueType="vca" cmd="park" displayType="VISIBILITY" node="dbl_Park" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="park" displayType="EMITTER" node="dbl_Park" emitColor="RED" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="park" displayType="AUDIO" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/brake/brake_big.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="park" cond="not" displayType="AUDIO" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/compressor/compressor_controller.ogg" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="diff_front" displayType="VISIBILITY" node="dbl_vca_awd" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="diff_front" displayType="EMITTER" node="dbl_vca_awd" emitColor="CLAAS_WHITE1" intensity="0.5" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="ks" displayType="VISIBILITY" node="dbl_vca_ks" groups="MOTOR_ACTIVE" />
