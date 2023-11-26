@@ -1710,7 +1710,7 @@
 			<!--dashboard valueType="proSeed" option="areafield" displayType="TEXT" node="dbl_ps_ha" textColor="0.1 0.1 0.1 1" textAlignment="RIGHT" textMask="000" textSize="0.0035" font="GENERIC" emissiveScale="0.7" groups="MOTOR_ACTIVE" /-->
 			
 			<!-- Testfeld -->
-			<!--dashboard valueType="proSeed" option="laneFull" displayType="TEXT" node="dbl_testNode" textMask="000" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE PAGE2"/-->
+			<dashboard valueType="print" option="Ölrettich" displayType="TEXT" node="dbl_testNode" textMask="sssssssssssssssss" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE PAGE2"/>
 			<!--dashboard valueType="base" cmd="motorFan" displayType="AUDIO" audioName="TEST" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/fan/fanLoop2.ogg"/-->
 			
 			<!-- FillLevel -->
