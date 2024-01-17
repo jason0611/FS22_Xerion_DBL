@@ -1710,8 +1710,8 @@
 			<!--dashboard valueType="proSeed" option="areafield" displayType="TEXT" node="dbl_ps_ha" textColor="0.1 0.1 0.1 1" textAlignment="RIGHT" textMask="000" textSize="0.0035" font="GENERIC" emissiveScale="0.7" groups="MOTOR_ACTIVE" /-->
 			
 			<!-- Testfeld -->
-			<dashboard valueType="print" option="Ölrettich" displayType="TEXT" node="dbl_testNode" textMask="sssssssssssssssss" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE PAGE2"/>
-			<!--dashboard valueType="base" cmd="motorFan" displayType="AUDIO" audioName="TEST" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/fan/fanLoop2.ogg"/-->
+			<!--dashboard valueType="proSeed" option="laneFull" displayType="TEXT" node="dbl_testNode" textMask="000" textColor="BLACK" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="CENTER" groups="MOTOR_ACTIVE PAGE2"/-->
+			<dashboard valueType="base" cmd="fillLevel" joints="0" partition="1" option="percent" cond="lessequal" factor="100" condValue="10" displayType="AUDIO" audioName="TEST" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/fan/fanLoop2.ogg" groups="MOTOR_ACTIVE"/>
 			
 			<!-- FillLevel -->
 			<dashboard valueType="base" cmd="connected" joints="1 2 3 4 5 6" option="any" node="dbl_fillLevelS" displayType="VISIBILITY" groups="MOTOR_ACTIVE" />
@@ -1744,10 +1744,8 @@
 			<!-- CVT addon -->
 			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="VISIBILITY" node="dbl_cvtLevel1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="EMITTER" node="dbl_cvtLevel1" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="cvt" cmd="drivingLevel" state="1" displayType="EMITTER" node="dbl_cvtLevel1Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="VISIBILITY" node="dbl_cvtLevel2" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="EMITTER" node="dbl_cvtLevel2" emitColor="CLAAS_GREEN1" intensity="0.8" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="cvt" cmd="drivingLevel" state="2" displayType="EMITTER" node="dbl_cvtLevel2Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="accRamp" state="1 2 3 4" displayType="VISIBILITY" node="dbl_cvtAccRamp1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="accRamp" state="1 2 3 4" displayType="EMITTER" node="dbl_cvtAccRamp1" emitColor="CLAAS_GREEN1" intensity="1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="accRamp" state="2 3 4" displayType="VISIBILITY" node="dbl_cvtAccRamp2" groups="MOTOR_ACTIVE" />
@@ -1764,6 +1762,10 @@
 			<dashboard valueType="cvt" cmd="brakeRamp" state="15 17" displayType="EMITTER" node="dbl_cvtBrakeRamp3" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp4" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="EMITTER" node="dbl_cvtBrakeRamp4" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
+			
+			<!-- SpeedControl -->
+			<dashboard valueType="cc" cmd="active" state="1" displayType="EMITTER" node="dbl_cvtLevel1Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cc" cmd="active" state="2" displayType="EMITTER" node="dbl_cvtLevel2Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			
 			<!-- VCA -->
 			<dashboard valueType="vca" cmd="park" displayType="VISIBILITY" node="dbl_Park" groups="MOTOR_ACTIVE" />
