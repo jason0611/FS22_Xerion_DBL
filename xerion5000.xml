@@ -1733,6 +1733,8 @@
 			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3 5" trailer="2" partition="2" cond="moreequal" factor="100" condValue="100" option="percent" displayType="AUDIO" audioName="FLW_TRAILER2P2" loop="2" audioFile="sounds/claasBeep.ogg" groups="MOTOR_ACTIVE TRAILER2B" />
 			<dashboard valueType="base" cmd="fillLevel" joints="4 6" trailer="1" partition="0" option="abs" displayType="TEXT" textMask="00000l" node="dbl_fillLevelF" textColor="GREY" textColorDarkMode="0 0 1 1" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_F_CONNECT PAGE1" />
 			
+			<!--dashboard valueType="base" cmd="fillType" option="icon" joints="1 2 3" trailer="1" partition="1" displayType="VISIBILITY" node="dbl_mapPlane" groups="PAGEU1 MOTOR_ACTIVE" /-->
+
 			<!--
 			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="1" partition="1" option="pct" displayType="TEXT" textMask="000 %" node="dbl_fillLevelT1P1" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE2" />
 			<dashboard valueType="base" cmd="fillLevel" joints="1 2 3" trailer="2" partition="1" option="pct" displayType="TEXT" textMask="000 %" node="dbl_fillLevelT2P1" textColor="GREY" textSize="0.003" fontThickness="1.5" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE DBL_B_CONNECT PAGE2" />
