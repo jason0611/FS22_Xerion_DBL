@@ -1511,7 +1511,7 @@
             </fillUnitConfiguration>
         </fillUnitConfigurations>
     </fillUnit>
-    <dashboard>
+    <dashboard maxUpdateDistance="20">
         <groups>
             <group name="MOTOR_STARTING" isMotorStarting="true"/>
             <group name="MOTOR_ACTIVE" isMotorStarting="true" isMotorRunning="true"/>
