@@ -1764,6 +1764,8 @@
 			<dashboard valueType="cvt" cmd="brakeRamp" state="15 17" displayType="EMITTER" node="dbl_cvtBrakeRamp3" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="VISIBILITY" node="dbl_cvtBrakeRamp4" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="cvt" cmd="brakeRamp" state="17" displayType="EMITTER" node="dbl_cvtBrakeRamp4" emitColor="CLAAS_RED1" intensity="1" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="warnHeat" displayType="AUDIO" audioName="hlm_field" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/cabin/hydrotrikeXL_cabinBeep.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="cvt" cmd="critHeat" displayType="AUDIO" audioName="hlm_field" loop="2" volume="0.5" audioFile="$data/sounds/vehicles/cabin/hydrotrikeXL_cabinBeep.ogg" groups="MOTOR_ACTIVE" />
 			
 			<!-- SpeedControl -->
 			<dashboard valueType="cc" cmd="active" state="1" displayType="EMITTER" node="dbl_cvtLevel1Led" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
@@ -1772,8 +1774,8 @@
 			<!-- VCA -->
 			<dashboard valueType="vca" cmd="park" displayType="VISIBILITY" node="dbl_Park" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="park" displayType="EMITTER" node="dbl_Park" emitColor="RED" intensity="0.8" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="vca" cmd="park" displayType="AUDIO" outside="true" distance="20.0" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/brake/brake_big.ogg" groups="MOTOR_ACTIVE" />
-			<dashboard valueType="vca" cmd="park" cond="not" displayType="AUDIO" outside="true" distance="20.0" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/compressor/compressor_controller.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="park" displayType="AUDIO" outside="true" distance="50.0" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/brake/brake_big.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="park" cond="not" displayType="AUDIO" outside="true" distance="50.0" audioName="Brake" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/compressor/compressor_controller.ogg" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="diff_front" displayType="VISIBILITY" node="dbl_vca_awd" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="diff_front" displayType="EMITTER" node="dbl_vca_awd" emitColor="CLAAS_WHITE1" intensity="0.5" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="ks" displayType="VISIBILITY" node="dbl_vca_ks" groups="MOTOR_ACTIVE" />
@@ -1787,6 +1789,9 @@
 			<dashboard valueType="hlm" option="headland" displayType="EMITTER" node="dbl_hlm_headlandS" baseColor="BLACK" emitColor="CLAAS_RED1" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="hlm" option="contour" displayType="VISIBILITY" node="dbl_hlm_contourS" groups="MOTOR_ACTIVE"/>
 			<dashboard valueType="hlm" option="contour" displayType="EMITTER" node="dbl_hlm_contourS" baseColor="BLACK" emitColor="0 0 1 1" intensity="0.8" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="hlm" option="field" displayType="AUDIO" audioName="hlm_field" loop="1" volume="0.5" audioFile="$data/sounds/vehicles/switch/blinker_holmerTerraVariant435.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="hlm" option="headland" displayType="AUDIO" audioName="hlm_headland" loop="2" volume="0.5" audioFile="$data/sounds/vehicles/switch/blinker_holmerTerraVariant435.ogg" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="hlm" option="contour" displayType="AUDIO" audioName="hlm_contour" loop="3" volume="0.5" audioFile="$data/sounds/vehicles/switch/blinker_holmerTerraVariant435.ogg" groups="MOTOR_ACTIVE" />
 
 			<!-- dbl upper (gps) dashboard -->
 			<!-- Global -->
