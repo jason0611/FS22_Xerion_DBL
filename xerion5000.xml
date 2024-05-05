@@ -1692,6 +1692,10 @@
 			<!-- Heading -->
 			<dashboard valueType="base" cmd="heading" displayType="TEXT" node="dbl_heading" textMask="000 DEG" textColor="BLACK" textColorDarkMode="0 0 1 1" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE" />
 			
+			<!-- Engine Warning -->
+			<dashboard valueType="rds" cmd="EngineLight" displayType="VISIBILITY" node="dbl_rds_damageInd" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="rds" cmd="EngineLight" displayType="EMITTER" node="dbl_rds_damageInd" baseColor="BLACK" emitColor="RED" intensity="0.5" groups="MOTOR_ACTIVE" />
+			
 			<!-- Field Number -->
 			<dashboard valueType="base" cmd="fieldNumber" displayType="TEXT" node="dbl_field" textMask="Feld000" textColor="BLACK" textColorDarkMode="0 0 1 1" textSize="0.004" fontThickness="1" font="GENERIC" textAlignment="RIGHT" groups="MOTOR_ACTIVE" />
 			
@@ -1784,6 +1788,8 @@
 			<dashboard valueType="vca" cmd="ks" displayType="VISIBILITY" node="dbl_vca_ks" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="ks" displayType="EMITTER" node="dbl_vca_ks" baseColor="BLACK" emitColor="YELLOW" intensity="0.8" groups="MOTOR_ACTIVE" />
 			<dashboard valueType="vca" cmd="slip" displayType="TEXT" node="dbl_numbersSlip" textColor="0.8 0.8 0.8 1" textAlignment="RIGHT" textMask="000" textSize="0.004" font="GENERIC" groups="MOTOR_ACTIVE"/>
+			<dashboard valueType="vca" cmd="slip" displayType="VISIBILITY" node="dbl_vca_slip" groups="MOTOR_ACTIVE" />
+			<dashboard valueType="vca" cmd="slip" displayType="EMITTER" node="dbl_vca_slip" baseColor="BLACK" emitColor="CLAAS_RED1" groups="MOTOR_ACTIVE" />
 			
 			<!-- HeadlandManagement -->
 			<dashboard valueType="hlm" option="field" displayType="VISIBILITY" node="dbl_hlm_fieldS" groups="MOTOR_ACTIVE"/>
@@ -2355,6 +2361,8 @@
 		<i3dMapping id="dbl_hlm_headlandS" node="0>0|7|0|0|1|1|10|28" />
 		<i3dMapping id="dbl_hlm_contourS" node="0>0|7|0|0|1|1|10|29" />
 		<i3dMapping id="dbl_vca_ks" node="0>0|7|0|0|1|1|10|30" />
+		
+		<i3dMapping id="dbl_rds_damageInd" node="0>0|7|0|0|1|1|10|63" />
 		
 		<i3dMapping id="dbl_fillLevelT1P1" node="0>0|7|0|0|1|1|10|19" />
 		<i3dMapping id="dbl_fillLevelT2P1" node="0>0|7|0|0|1|1|10|20" />
